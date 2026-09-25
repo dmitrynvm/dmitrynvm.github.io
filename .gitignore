@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local notes and drafts — keep them out of a public repo
+scratchpad/
+draft*/
+*.draft.html
+notes.md
+TODO.md
+
+# Backups and temporary files
+*.bak
+*.orig
+*.rej
+*.tmp
+*.log
+
+# Image working files (the published site uses img/*.png and img/*.jpg)
+*.psd
+*.xcf
+*.heic
+img/**/original/
+img/**/*-raw.*
+
+# Anything a local preview server might drop
+.cache/
+node_modules/
