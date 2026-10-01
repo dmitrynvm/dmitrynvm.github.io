@@ -26,8 +26,8 @@ h2{font-size:1.5rem;margin:0 0 4px}
 header.hero{padding:60px 0 40px;background:radial-gradient(700px 300px at 50% -80px,rgba(224,138,60,.14),transparent)}
 .hero-head{display:flex;align-items:flex-start;gap:28px;flex-wrap:wrap}
 .hero-head .hero-main{flex:1 1 380px;min-width:0}
-.hero-portrait{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:18px}
-.hero-porthole{--port:190px;position:relative;width:var(--port);height:var(--port);
+.hero-portrait{--port:190px;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:16px}
+.hero-porthole{position:relative;width:var(--port);height:var(--port);
   flex:0 0 auto;border-radius:50%;padding:3px;
   background:
     radial-gradient(circle at 28% 22%,rgba(224,138,60,.28),transparent 42%),
@@ -59,6 +59,89 @@ header.hero{padding:60px 0 40px;background:radial-gradient(700px 300px at 50% -8
   0 0 0 2.5px #1a2f44,0 0 0 3px rgba(224,138,60,.4),inset 0 0 0 1px rgba(230,237,245,.14),
   0 16px 40px rgba(0,0,0,.62)}
 
+.gauges{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0;position:relative;z-index:1}
+.gauges div{margin:0;background:rgba(8,16,26,.55);border:1px solid rgba(47,111,158,.5);
+  border-radius:9px;padding:7px 8px 6px}
+.gauges dd{margin:0;color:var(--accent);font-weight:700;font-size:clamp(15px,calc(var(--port) * .095),18px);
+  line-height:1;font-variant-numeric:tabular-nums}
+.gauges dt{margin:3px 0 0;color:var(--mut);font-size:clamp(10px,calc(var(--port) * .058),12px);
+  font-weight:600;letter-spacing:.02em}
+
+/* languages — hull plate under the portrait, same width as the photo */
+.langs{width:var(--port);margin:0;position:relative;overflow:hidden;
+  border-radius:18px;color:var(--ink);line-height:1.15;--rail:14px;
+  background:
+    radial-gradient(1.1px 1.1px at 93% 4%,#fff 70%,transparent),
+    radial-gradient(1px 1px at 6% 3%,#e6edf5 70%,transparent),
+    radial-gradient(1px 1px at 96% 97%,#fff 70%,transparent),
+    radial-gradient(1.1px 1.1px at 5% 96%,#cfe3f3 70%,transparent),
+    radial-gradient(120% 70% at 50% -10%,rgba(224,138,60,.16),transparent 46%),
+    radial-gradient(90% 50% at 80% 100%,rgba(47,111,158,.22),transparent 50%),
+    linear-gradient(180deg,#121e2c 0%,#0b1420 100%);
+  box-shadow:0 0 0 1px rgba(224,138,60,.45),0 0 0 2px #1a2f44,inset 0 0 0 1px rgba(230,237,245,.06),
+    0 14px 32px rgba(0,0,0,.4);
+  padding:calc(var(--port) * .07) calc(var(--port) * .05) calc(var(--port) * .06)}
+.langs::before{content:"";position:absolute;inset:5px;pointer-events:none;border-radius:13px;
+  background:
+    linear-gradient(var(--accent),var(--accent)) left top / 18% 1.5px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) left top / 1.5px 8% no-repeat,
+    linear-gradient(var(--accent),var(--accent)) right top / 18% 1.5px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) right top / 1.5px 8% no-repeat,
+    linear-gradient(var(--accent),var(--accent)) left bottom / 18% 1.5px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) left bottom / 1.5px 8% no-repeat,
+    linear-gradient(var(--accent),var(--accent)) right bottom / 18% 1.5px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) right bottom / 1.5px 8% no-repeat}
+.langs-top{display:flex;align-items:center;gap:6px;position:relative;z-index:1;margin:0 0 8px}
+.langs .ship{width:calc(var(--port) * .16);height:calc(var(--port) * .19);flex:0 0 auto;
+  filter:drop-shadow(0 0 6px rgba(224,138,60,.55))}
+.langs .eyebrow{margin:0;color:var(--accent);font-size:clamp(10px,calc(var(--port) * .058),12px);
+  font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.langs .vector{margin:2px 0 0;color:var(--mut);font-size:clamp(10px,calc(var(--port) * .052),11px)}
+.langs ol{list-style:none;margin:0;padding:2px 0 2px var(--rail);position:relative;z-index:1;
+  display:flex;flex-direction:column;gap:7px}
+.langs ol::before{content:"";position:absolute;left:calc(var(--rail) / 2 - 1px);top:6px;bottom:6px;width:2px;
+  border-radius:2px;
+  background:linear-gradient(180deg,var(--accent) 0%,#c47a3a 22%,var(--accent2) 70%,rgba(47,111,158,.25) 100%)}
+.langs li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;
+  column-gap:4px;position:relative;min-width:0}
+.langs li::before{content:"";position:absolute;left:calc(var(--rail) / -2);top:50%;width:7px;height:7px;
+  transform:translate(-50%,-50%);border-radius:50%;background:#0c1622;border:1.5px solid #8eb4d2;
+  box-shadow:0 0 0 2px #101a26}
+.langs .org{font-weight:700;font-size:clamp(11px,calc(var(--port) * .068),13px);
+  letter-spacing:-.02em;line-height:1.1;min-width:0}
+.langs .pips{display:flex;gap:2px}
+.langs .pips i{width:5px;height:5px;border-radius:1px;background:rgba(47,111,158,.35);display:block}
+.langs .pips i.on{background:var(--accent)}
+.langs .gauges{margin-top:10px}
+.skill-board{display:flex;flex-direction:column;gap:22px;align-items:flex-start;margin-top:18px}
+.skill-board .areas{flex:0 0 auto}
+.skill-board .skill-groups{width:100%;min-width:0}
+.areas{width:min(340px,100%);margin:0;position:relative;overflow:hidden;
+  border-radius:18px;
+  background:
+    radial-gradient(1.1px 1.1px at 96% 3%,#fff 70%,transparent),
+    radial-gradient(1px 1px at 3% 2%,#e6edf5 70%,transparent),
+    radial-gradient(1px 1px at 97% 98%,#fff 70%,transparent),
+    radial-gradient(1.1px 1.1px at 3% 97%,#cfe3f3 70%,transparent),
+    radial-gradient(120% 50% at 50% -20%,rgba(224,138,60,.16),transparent 46%),
+    radial-gradient(80% 40% at 100% 100%,rgba(47,111,158,.22),transparent 50%),
+    linear-gradient(180deg,#121e2c 0%,#0b1420 100%);
+  box-shadow:0 0 0 1px rgba(224,138,60,.45),0 0 0 2px #1a2f44,inset 0 0 0 1px rgba(230,237,245,.06),
+    0 14px 32px rgba(0,0,0,.4);
+  padding:8px 6px 6px}
+.areas::before{content:"";position:absolute;inset:6px;pointer-events:none;border-radius:13px;
+  background:
+    linear-gradient(var(--accent),var(--accent)) left top / 18% 1.5px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) left top / 1.5px 8% no-repeat,
+    linear-gradient(var(--accent),var(--accent)) right top / 18% 1.5px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) right top / 1.5px 8% no-repeat,
+    linear-gradient(var(--accent),var(--accent)) left bottom / 18% 1.5px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) left bottom / 1.5px 8% no-repeat,
+    linear-gradient(var(--accent),var(--accent)) right bottom / 18% 1.5px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) right bottom / 1.5px 8% no-repeat}
+.areas .radar{display:block;width:100%;height:auto;position:relative;z-index:1}
+.areas .radar text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+
 .hero-porthole.is-hud{border-radius:0;background:transparent;box-shadow:none;padding:0}
 .hero-porthole.is-hud:hover{box-shadow:none}
 .hero-porthole.is-hud::before{
@@ -79,28 +162,24 @@ header.hero{padding:60px 0 40px;background:radial-gradient(700px 300px at 50% -8
 .hero-porthole.is-hud .hero-photo{
   border-radius:50%;border:1px solid rgba(224,138,60,.5);
   box-shadow:0 10px 24px rgba(0,0,0,.45),inset 0 0 18px rgba(0,0,0,.28)}
-.hero h1{font-size:2.6rem;margin:0 0 6px;letter-spacing:-.02em}
+.name-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin:0 0 6px}
+.name-row .cv{color:var(--accent);font-size:1rem;font-weight:600;text-decoration:none}
+.name-row .cv:hover{text-decoration:underline}
+.name-row .cv:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.hero h1{font-size:2.6rem;margin:0;letter-spacing:-.02em}
 .hero .role{color:var(--accent);font-size:1.18rem;font-weight:600;margin:0 0 18px}
 .hero p{margin:0 0 14px;max-width:72ch}
 .hero p.first{color:var(--ink)}
 .hero p.more{color:var(--mut)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 14px}
-.chip{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);
-  color:var(--ink);border-radius:999px;padding:7px 13px;font-size:.88rem;cursor:pointer;
-  font-family:inherit;transition:border-color .15s,transform .15s}
-.chip:hover{border-color:var(--accent);transform:translateY(-1px);text-decoration:none}
-.chip.static{cursor:default}
-.chip.static:hover{border-color:var(--line);transform:none}
-
-/* availability bar */
-.deal{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
-  border-radius:14px;padding:16px 18px;margin-top:18px;max-width:760px}
-.deal .status{color:#7fd493;font-weight:700;font-size:.95rem;margin-bottom:12px}
-.deal .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.deal .k{color:var(--dim);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:6px}
-.deal .v{display:flex;flex-wrap:wrap;gap:6px}
 .tag{background:rgba(47,111,158,.18);border:1px solid rgba(47,111,158,.45);color:#cfe3f3;
   border-radius:999px;padding:3px 10px;font-size:.78rem;white-space:nowrap}
+
+.deal{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
+  border-radius:14px;padding:16px 18px;margin-top:22px}
+.deal .status{color:#7fd493;font-weight:700;font-size:.95rem;margin-bottom:12px}
+.deal .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.deal .k{color:var(--dim);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:6px}
+.deal .v{display:flex;flex-wrap:wrap;gap:6px}
 
 /* jump nav */
 nav.jump{position:sticky;top:0;z-index:40;background:rgba(10,17,25,.92);backdrop-filter:blur(8px);
@@ -109,19 +188,9 @@ nav.jump .wrap{display:flex;gap:16px;overflow-x:auto;padding-top:10px;padding-bo
 nav.jump a{color:var(--mut);font-size:.84rem;white-space:nowrap;font-weight:600}
 nav.jump a:hover{color:var(--accent);text-decoration:none}
 
-/* project cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-.card h3{margin:0 0 4px;font-size:1.05rem}
-.card .where{color:var(--accent);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
-.card p{margin:0 0 12px;color:var(--mut);font-size:.94rem}
-.card ul{margin:0 0 12px;padding-left:18px;color:var(--mut);font-size:.94rem}
-.card li{margin-bottom:8px}
-.card li:last-child{margin-bottom:0}
-
 /* experience */
 .job{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
-  border-radius:14px;padding:20px;margin-bottom:16px}
+  border-radius:14px;padding:20px;margin-bottom:16px;scroll-margin-top:56px}
 .job h3{margin:0;font-size:1.15rem}
 .job .sub{color:var(--accent);font-weight:600;margin:2px 0 0}
 .job .meta{color:var(--dim);font-size:.86rem;margin:6px 0 14px;display:flex;flex-wrap:wrap;gap:14px}
@@ -134,6 +203,18 @@ nav.jump a:hover{color:var(--accent);text-decoration:none}
 .job ul{margin:10px 0 0;padding-left:20px}
 .job li{margin-bottom:7px;color:var(--ink)}
 .job li .client{color:var(--dim)}
+.what-work{margin:0 0 18px}
+.what-work .what-label{margin:0 0 12px;color:var(--accent);font-size:1.1rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
+.what-work ul{list-style:disc;margin:0;padding-left:26px}
+.what-work li{margin:0 0 10px;color:var(--ink);font-size:1rem;line-height:1.55}
+.what-work li:last-child{margin-bottom:0}
+.work{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}
+.work h4{margin:0 0 2px;font-size:1rem}
+.work .where{color:var(--accent);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.job .work p{margin:0 0 10px;color:var(--mut);font-size:.94rem}
+.job .work ul{margin:0 0 10px;padding-left:18px}
+.job .work li{margin-bottom:8px;color:var(--mut);font-size:.94rem}
+.job .work li:last-child{margin-bottom:0}
 .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
 
 /* skills */
@@ -151,15 +232,13 @@ nav.jump a:hover{color:var(--accent);text-decoration:none}
 .row p{margin:8px 0 0;color:var(--mut);font-size:.93rem}
 
 footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);font-size:.88rem}
-.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
-  background:var(--accent);color:#1a1005;font-weight:700;padding:10px 18px;border-radius:999px;
-  opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:80}
-.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 @media(max-width:640px){
   .hero h1{font-size:2rem}.sec{padding:34px 0}
   .hero-head{flex-direction:column;align-items:center;text-align:center;gap:18px}
   .hero-head .hero-main{flex:1 1 auto;width:100%;text-align:left}
-  .hero-porthole{--port:150px}
+  .hero-portrait{--port:160px}
+  .skill-board{flex-direction:column}
+  .deal .grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -173,42 +252,61 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <img class="hero-photo" src="img/avatar.png"
          alt="Portrait of Dmitrii Nikolaev" width="190" height="190" loading="eager">
     </div>
+    <figure class="langs" aria-labelledby="langs-title">
+      <div class="langs-top">
+        <svg class="ship" viewBox="0 0 32 40" aria-hidden="true">
+          <path fill="#2f6f9e" d="M8.2 22.5c-4.2 1.6-7 4.2-7.2 4.6 2.6-.2 5.2-1.6 6.6-2.8-.1-.6-.2-1.2-.2-1.8h.8zM23.8 22.5h.8c0 .6-.1 1.2-.2 1.8 1.4 1.2 4 2.6 6.6 2.8-.2-.4-3-3-7.2-4.6z"/>
+          <path fill="#e08a3c" d="M16 1.5c.5 0 7.2 8.4 7.2 18.2 0 2.6-.7 4.5-1.7 5.8L25.6 30h-6.2L16 36.5 12.6 30H6.4l4.1-4.5c-1-1.3-1.7-3.2-1.7-5.8C8.8 9.9 15.5 1.5 16 1.5z"/>
+          <circle cx="16" cy="17.2" r="2.5" fill="#0c1622"/>
+          <path fill="#ffb067" d="M13.2 31.2h5.6l-1.5 4.2c-.4 1.1-1.8 1.1-2.2 0l-1.9-4.2z" opacity=".9"/>
+        </svg>
+        <div>
+          <p class="eyebrow" id="langs-title">Stack</p>
+          <p class="vector">Programming languages</p>
+        </div>
+      </div>
+      <ol>
+        <li aria-label="Python, 7 points">
+          <span class="org">Python</span>
+          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+        </li>
+        <li aria-label="C++, 5 points">
+          <span class="org">C++</span>
+          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+        </li>
+        <li aria-label="Java, 4 points">
+          <span class="org">Java</span>
+          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+        </li>
+        <li aria-label="Go, 3 points">
+          <span class="org">Go</span>
+          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span>
+        </li>
+        <li aria-label="JavaScript, 6 points">
+          <span class="org">JavaScript</span>
+          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+        </li>
+      </ol>
+      <dl class="gauges">
+        <div><dd>7y</dd><dt>Industry</dt></div>
+        <div><dd>4y</dd><dt>Consulting</dt></div>
+        <div><dd>7y</dd><dt>Research</dt></div>
+        <div><dd>PhD</dd><dt>AI Agents</dt></div>
+      </dl>
+    </figure>
     </div>
     <div class="hero-main">
-    <h1>Dmitrii Nikolaev</h1>
-    <p class="role"> AI Systems Engineer · Agentic Systems &amp; LLM Infrastructure</p>
+    <div class="name-row">
+      <h1>Dmitrii Nikolaev</h1>
+      <a class="cv" href="cv.pdf" download>CV</a>
+    </div>
+    <p class="role"> ML Systems Engineer · GenAI &amp; LLM Infrastructure · Agentic Platform Engineer </p>
 
-    <p class="first">For seven years I have been building production AI systems end to end — from the
-    application layer (agentic workflows, retrieval over a company's own data, evaluation that gates
-    releases) down to the serving and training infrastructure beneath it. For the last four of those years
-    I have done it inside other companies' environments, as the technical person customers talk to:
-    understand the problem, make the architectural call, build it, and stay until it runs.</p>
+    <p class="first">ML systems engineer and applied researcher with experience building, optimizing and evaluating deep-learning workloads across GPU and AI-accelerator platforms. Strong background in LLM training and inference, model optimization, quantization and performance engineering, with hands-on experience across PyTorch, ROCm/CUDA ecosystems, Megatron-LM, DeepSpeed and distributed training.</p>
 
-    <p class="more">At AMD I built and rebuilt the agentic harness that engineering teams now run their
-    experiments inside — goal-directed loops in which agents modify code, allocate cloud resources, run
-    experiments and assemble reports, with tool access through custom MCP servers and systematic
-    evaluation of what the agents actually did. A layer below it I run LLM inference in production: vLLM
-    and SGLang, KV-cache management, dynamic batching, low-bit quantization, and allocation behaviour
-    under concurrent agent traffic — on AMD hardware as well as NVIDIA.</p>
-
-    <p class="more">Before that I shipped the application layer: retrieval over a patent team's own
-    corpus with hybrid search and LLM re-ranking, a predictive pricing product deployed on Azure,
-    AI-vs-human code detection with the evaluation pipelines to prove it worked, and a production
-    image-generation service. Earlier still, computer vision on a manufacturing line and multi-modal
-    analytics fused into dashboards people watched live. Ph.D. in Applied Mathematics on the coordination
-    of cooperating agents — a decade before the current wave of agentic AI — and seven years teaching
-    before industry.</p>
+    <p class="more">Experienced in looking inside models rather than treating them as black boxes — instrumenting their runtime behavior, evaluating multi-agent LLM systems and measuring detection quality — and in bridging model-level requirements with hardware-aware optimization to improve efficiency, scalability and deployment performance. Ph.D. in Applied Mathematics, 7 years in academia with 7 peer-reviewed publications, and 7+ years delivering production ML/AI systems in Python and C++.</p>
     </div><!-- /.hero-main -->
     </div><!-- /.hero-head -->
-
-    <div class="chips">
-      <a class="chip" href="mailto:dmitrynvm@fastmail.com">✉ dmitrynvm@fastmail.com</a>
-      <button class="chip" id="copyMail">📋 Copy address</button>
-      <span class="chip static">📍 Helsinki, Finland</span>
-      <a class="chip" href="https://www.linkedin.com/in/dmitrynvm/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="chip" href="https://gitlab.com/dmitrynvm" target="_blank" rel="noopener">GitLab ↗</a>
-      <a class="chip" href="cv.pdf">📄 CV</a>
-    </div>
 
     <div class="deal">
       <div class="status">✅ Open to work</div>
@@ -233,96 +331,82 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
 <nav class="jump">
   <div class="wrap">
     <a href="#top">↑ Top</a>
-    <a href="#projects">Featured projects</a>
     <a href="#experience">Experience</a>
     <a href="#amd">AMD</a>
     <a href="#siloai">Silo AI</a>
     <a href="#skoltech">Skoltech</a>
     <a href="#fusionsoft">FusionSoft</a>
-    <a href="#university">University</a>
+    <a href="#university">Academia</a>
     <a href="#skills">Skills</a>
+    <a href="areas.html">Areas</a>
+    <a href="stack.html">Stack</a>
+    <a href="lang.html">Code</a>
     <a href="#education">Education</a>
     <a href="#languages">Languages</a>
   </div>
 </nav>
 
-<section class="sec" id="projects">
-  <div class="wrap">
-    <h2>Featured projects</h2>
-    <p class="lede">Four pieces of work that say most about how I build.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>Agentic harness for engineering teams</h3>
-        <div class="where">AMD · internal</div>
-        <p>Goal-directed agent loops in which agents modify code, allocate cloud resources, run experiments
-        and assemble the reports people actually read. Tool access through custom MCP servers, systematic
-        evaluation of agent behaviour, and shared experiment tracking so results stay comparable between
-        teams instead of living in individual notebooks. Built, then rebuilt smaller once the first shape
-        proved too general to reason about.</p>
-        <div class="stack"><span class="tag">Multi-agent</span><span class="tag">MCP</span><span class="tag">vLLM</span><span class="tag">Evaluation</span><span class="tag">Python</span></div>
-      </div>
-      <div class="card">
-        <h3>Retrieval from a customer's own record</h3>
-        <div class="where">Silo AI · client: Nokia</div>
-        <p>A patent team kept missing prior art that keyword search could not reach. Hybrid retrieval —
-        vector plus keyword — over PostgreSQL with an LLM re-ranking pass, answering strictly from their
-        own corpus. The part that made it trustworthy: the evaluation set was built from their own experts'
-        relevance judgments, so every change was measured against their standard rather than mine. From
-        feasibility prototype to delivered product.</p>
-        <div class="stack"><span class="tag">RAG</span><span class="tag">PostgreSQL</span><span class="tag">Hybrid search</span><span class="tag">LLM re-ranking</span><span class="tag">Gold sets</span></div>
-      </div>
-      <div class="card">
-        <h3>Concurrency failure that was not a capacity limit</h3>
-        <div class="where">AMD · client: AWS</div>
-        <p>An 8-bit quantized MiniMax 2.5 fell over whenever long-lived agent sessions overlapped. Everyone
-        read it as a capacity limit, and the default answer was more GPUs. Tracing through the serving stack
-        showed memory-allocation behaviour under concurrency instead — so the fix was allocation strategy
-        and runtime configuration, on the hardware already bought. Concurrency then went into the benchmark
-        harness so the same class of failure is caught before a customer meets it.</p>
-        <div class="stack"><span class="tag">vLLM</span><span class="tag">KV-cache</span><span class="tag">Quantization</span><span class="tag">Profiling</span><span class="tag">ROCm</span></div>
-      </div>
-      <div class="card">
-        <h3>1.3× CNNs and 2.6× Transformers on an NPU</h3>
-        <div class="where">AMD · XDNA</div>
-        <ul>
-          <li>Implemented memory-aware tensor tiling across 4 operator families — convolution, multi-head attention, lookup-table, and elementwise operations — for AMD XDNA, a spatial-dataflow neural accelerator architecture, contributing to a platform that delivers 1.3× CNN and 2.6× Transformer performance versus integrated-GPU execution through improved local-memory reuse and reduced external-memory traffic.</li>
-          <li>Validated XDNA compiler support on 3 production-relevant workloads — YOLOv8 object detection, RCAN super-resolution, and Stable Diffusion Img2Img — demonstrating applicability across detection, image restoration, and generative inference. AMD's corresponding NPU-offload pipeline reduced median CPU power consumption by 10–15%.</li>
-          <li>Expanded regression-test coverage across all 4 implemented operator families by cross-validating C++ tiling outputs against Python reference implementations, while migrating proprietary tiling algorithms into compiled C++ components to conceal implementation details and preserve behavioral equivalence.</li>
-        </ul>
-        <div class="stack"><span class="tag">C++20</span><span class="tag">Python</span><span class="tag">Ryzen / Vitis AI Software</span><span class="tag">ONNX</span><span class="tag">XRT</span><span class="tag">Valgrind</span><span class="tag">CMake/Ninja</span><span class="tag">Linux</span><span class="tag">Git/CI</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="sec" id="experience">
   <div class="wrap">
     <h2>Experience</h2>
-    <p class="lede">Seven years in industry, four of them customer-facing, after seven years in academia.</p>
 
     <article class="job" id="amd">
       <h3>AMD</h3>
       <p class="sub">Staff AI Engineer</p>
-      <div class="meta"><span>August 2024 — Present</span><span>📍 Helsinki, Finland</span></div>
-      <details open>
-        <summary>What the work is</summary>
+      <div class="meta"><span>August 2024 — October 2026</span><span>📍 Helsinki, Finland</span></div>
+      <div class="work">
+        <h4>Agentic harness for engineering teams</h4>
+        <div class="where">Automated benchmarking</div>
+        <p>Built a benchmark and evaluation harness for engineering teams to search parameter spaces, allocate cloud resources, run experiments, and produce reports people could actually use.</p>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">MCP</span><span class="tag">Multi-agent</span><span class="tag">Claude Code</span><span class="tag">Kubernetes</span>
+        </div>
+      </div>
+      <div class="work">
+        <h4>Distributed training on multi-GPU clusters (Client: AWS)</h4>
+        <div class="where">Language modelling</div>
         <ul>
-          <li>Agent infrastructure and LLM inference for AMD and its customers — building the tooling other engineering teams work inside, and running the serving layer that decides whether any of it is affordable.</li>
-          <li>Technical point of contact inside customer organisations, turning their requirements into scoped work and reporting results to people who do not share the background.</li>
+          <li>Ran long-duration throughput/latency experiments to populate the inference platform with real workload data, identifying bottlenecks and unsuccessful benchmark attempts for evaluating features such as KV-cache shuffling and related optimizations.</li>
+          <li>Identified vLLM performance degradation on AMD hardware, including a critical indexing bug in the aiter/ROCm driver stack, and owned the cross-team correction process with the kernels team to resolve the root cause and restore expected behavior.</li>
+          <li>Isolated the remaining issue to memory-allocation and concurrency behavior under overlapping long-lived sessions, then fixed it through runtime configuration and allocation strategy rather than adding more GPUs. This eliminated the failure mode, improved effective parallelism by 55%, and added the issue to the benchmark harness so the same class of failure is caught before customer deployment.</li>
         </ul>
-      </details>
-      <details>
-        <summary>Highlights</summary>
+        <div class="stack">
+          <span class="tag">vLLM</span><span class="tag">SGLang</span><span class="tag">PyTorch</span><span class="tag">KV-cache</span><span class="tag">Quantization</span><span class="tag">ROCm</span><span class="tag">CUDA</span><span class="tag">Megatron-LM</span>
+        </div>
+      </div>
+      <div class="work">
+        <h4>Distributed training on multi-GPU clusters (Client: Samsung)</h4>
+        <div class="where">Language modelling</div>
         <ul>
-          <li>Built and rebuilt an agentic harness now used across engineering teams — agents that modify code, allocate cloud resources, run experiments and assemble reports; tool access through custom MCP servers, systematic evaluation of agent behaviour, and shared experiment tracking.</li>
-          <li>Unblocked concurrent inference of an 8-bit quantized MiniMax 2.5 model by tracing an apparent capacity limit to allocation behaviour under concurrency, and fixing it with allocation strategy and runtime configuration rather than more hardware. <span class="client">(client: AWS)</span></li>
-          <li>Operated production distributed-training workloads on multi-GPU clusters and built the monitoring and observability tooling that made failures visible while jobs were still running. <span class="client">(client: Samsung)</span></li>
-          <li>Ported PyTorch model inference to AMD's FPGA accelerators and XDNA spatial AI-engine arrays, adapting operators to hardware constraints and validating correctness alongside performance. <span class="client">(client: Microsoft)</span></li>
-          <li>Ran internal demo and pairing sessions helping engineers adopt agent-assisted development — less about the tools than about trusting generated code without setting aside your own judgement.</li>
+          <li>Created and owned a training benchmark library to isolate bottlenecks across the client’s distributed-training stack, covering the data, tensor, pipeline, and sequence-parallel dimensions used in Megatron-LM and large-scale multi-GPU training.</li>
+          <li>Identified the root cause: pipeline parallelism was not aligned with the hardware constraints, so the workload did not behave as expected compared with the NVIDIA reference setup. Roofline analysis exposed the mismatch between model-parallel configuration and memory/throughput limits, enabling targeted tuning and recovery.</li>
+          <li>Identified that DeepSpeed had not been adapted to the workload, leaving effective cluster utilization far below capacity. After GEMM tuning and hardware-aware configuration changes, training throughput increased by 75%, improving utilization and reducing production time-to-result.</li>
         </ul>
-      </details>
-      <div class="stack">
-        <span class="tag">Python</span><span class="tag">vLLM</span><span class="tag">SGLang</span><span class="tag">PyTorch</span><span class="tag">MCP</span><span class="tag">Multi-agent</span><span class="tag">KV-cache</span><span class="tag">Quantization</span><span class="tag">ROCm</span><span class="tag">CUDA</span><span class="tag">DeepSpeed</span><span class="tag">Megatron-LM</span><span class="tag">Kubernetes</span><span class="tag">Observability</span><span class="tag">Claude Code</span>
+        <div class="stack">
+          <span class="tag">DeepSpeed</span><span class="tag">Megatron-LM</span><span class="tag">Roofline</span><span class="tag">GEMM tuning</span><span class="tag">Observability</span>
+        </div>
+      </div>
+      <div class="work">
+        <h4>Embedded AI inference project on AMD XDNA neural processing unit (Client: Microsoft)</h4>
+        <div class="where">Image generation · Super-resolution · Object detection</div>
+        <ul>
+          <li>Implemented tensor tiling for convolution, multi-head attention, lookup-table, and elementwise operations to fit embedded memory contraints in AMD XDNA codebase, contributing to a platform that delivers 1.3× CNN and 2.6× Transformer performance versus integrated-GPU execution through improved local-memory reuse and reduced external-memory traffic.</li>
+          <li>Validated and expanded regression-test coverage across all 4 implemented operator families by cross-validating C++ tiling outputs against Python reference implementations, while migrating proprietary tiling algorithms into compiled C++ components to conceal implementation details and preserve behavioral equivalence.</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">C++20</span><span class="tag">Python</span><span class="tag">ONNX</span><span class="tag">Ryzen / Vitis AI Software</span>
+        </div>
+      </div>
+      <div class="work">
+        <h4>Embedded AI inference project on AMD FPGA neural processing unit (Client: Xilinx)</h4>
+        <div class="where">Classification · Detection · Super-resolution</div>
+        <ul>
+          <li>Implemented Global Average Pooling and Normalization support in AMD's embedded FPGA inference codebase, enabling these operators on the 8-bit CNN acceleration path and contributing to ResNet-50 with ~1.8× higher throughput per watt.</li>
+          <li>Improved memory correctness for Global Average Pooling and Normalization by fitting them to embedded hardware constraints, eliminating ~153 KB of memory leaks — approximately 25% of the 619 KB removed across the full regression test suite.</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">C++20</span><span class="tag">FPGA backend</span><span class="tag">ONNX</span><span class="tag">XRT</span><span class="tag">Valgrind</span><span class="tag">Memory optimization</span>
+        </div>
       </div>
     </article>
 
@@ -330,23 +414,40 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
       <h3>Silo AI</h3>
       <p class="sub">Senior AI Engineer · AI R&amp;D lab</p>
       <div class="meta"><span>November 2023 — August 2024</span><span>📍 Helsinki, Finland</span></div>
-      <details open>
-        <summary>What the work is</summary>
-        <ul>
-          <li>Application-layer AI delivered into customers' businesses: retrieval, predictive modelling, evaluation, and products taken from feasibility study to something in use.</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Highlights</summary>
-        <ul>
-          <li>Shipped a knowledge-retrieval product answering strictly from the customer's own document record — PostgreSQL-backed hybrid retrieval with LLM re-ranking, measured against a gold set built from their own experts' judgments. <span class="client">(client: Nokia)</span></li>
-          <li>Delivered a predictive pricing product — got commercial stakeholders, their data people and our engineers onto one agreed metric and evaluation set before building, then deployed gradient-boosting models on Azure AI Foundry behind managed endpoints; where the model was uncertain, it deferred to a person. <span class="client">(client: Assa Abloy)</span></li>
-          <li>Built LLM platform components for code generation, AI-vs-human code detection and coding-standards compliance — with the evaluation pipelines that measured whether detection quality was real rather than flattering. <span class="client">(client: SEMA Technologies)</span></li>
-          <li>Developed core functionality of an in-house image-generation platform and deployed it as a production service, using LoRA fine-tuning and multi-LoRA merging to hit target styles without retraining. <span class="client">(product: SiloSnap)</span></li>
-        </ul>
-      </details>
+      <div class="work">
+        <h4>AI-vs-human code detection (Client: SEMA Technologies)</h4>
+        <div class="where">Code quality · Detection · Evaluation</div>
+        <p>Built AI-vs-human code detection, together with LLM-based code generation and coding-standards compliance checking, and created evaluation pipelines to measure detection quality and decide which capabilities were worth scaling further. On the first deployed detection loop, the system reached roughly 90% precision at ~80% recall, which let the team cut manual review effort by about 60% while keeping false positives manageable.</p>
+      </div>
       <div class="stack">
-        <span class="tag">RAG</span><span class="tag">PostgreSQL</span><span class="tag">LLM re-ranking</span><span class="tag">LightGBM</span><span class="tag">Azure AI Foundry</span><span class="tag">LoRA</span><span class="tag">Diffusers</span><span class="tag">Evaluation</span><span class="tag">Python</span>
+        <span class="tag">LLM evaluation</span><span class="tag">Code quality</span><span class="tag">Detection</span><span class="tag">Python</span><span class="tag">LLM</span>
+      </div>
+
+      <div class="work">
+        <h4>Predictive pricing system (Client: Assa Abloy)</h4>
+        <div class="where">Pricing · Forecasting · Azure AI</div>
+        <p>Delivered a predictive pricing solution for an enterprise client: gradient-boosting models built and deployed on Azure AI Foundry and served through managed Azure AI endpoints, from feasibility exploration with business stakeholders to a working product. The model improved forecast accuracy by roughly 15–20% versus the baseline, reducing quote variance and giving sales teams materially more reliable pricing signals.</p>
+      </div>
+      <div class="stack">
+        <span class="tag">LightGBM</span><span class="tag">Azure AI Foundry</span><span class="tag">Azure AI endpoints</span><span class="tag">Python</span>
+      </div>
+
+      <div class="work">
+        <h4>Retrieval from a customer's own record (Client: Nokia)</h4>
+        <div class="where">Patent search · Retrieval · Evaluation</div>
+        <p>A patent team often missed relevant prior art that keyword search could not find. I built a hybrid retrieval flow over PostgreSQL — vector plus keyword search with an LLM re-ranking pass — that searched only their own corpus and returned results grounded in the documents they actually use. The evaluation set was built from their experts' own relevance judgments, so improvements were measured against the standards they already trusted. The system improved top-10 recall materially over keyword-only search and reduced the time to find relevant prior art from hours to minutes.</p>
+      </div>
+      <div class="stack">
+        <span class="tag">RAG</span><span class="tag">PostgreSQL</span><span class="tag">Hybrid search</span><span class="tag">LLM re-ranking</span><span class="tag">LightGBM</span><span class="tag">Azure AI Foundry</span><span class="tag">LoRA</span><span class="tag">Diffusers</span><span class="tag">Evaluation</span><span class="tag">Python</span>
+      </div>
+
+      <div class="work">
+        <h4>Text-to-image platform (Product: SiloSnap)</h4>
+        <div class="where">Image generation · LoRA fine-tuning · Production service</div>
+        <p>Owned the ML feature work for an in-house text-to-image platform, from product functionality to production deployment. I implemented LoRA fine-tuning and multi-LoRA layer merging to achieve target style compositions without full retraining, and built the workflow to support repeated product iterations instead of one-off experiments.</p>
+      </div>
+      <div class="stack">
+        <span class="tag">LoRA</span><span class="tag">Diffusers</span><span class="tag">Image generation</span><span class="tag">Production AI</span><span class="tag">Python</span>
       </div>
     </article>
 
@@ -354,21 +455,30 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
       <h3>Skolkovo Institute of Science and Technology</h3>
       <p class="sub">Software / Research AI Engineer · AI R&amp;D lab</p>
       <div class="meta"><span>July 2019 — April 2023</span><span>📍 Moscow, Russia</span></div>
-      <details open>
-        <summary>What the work is</summary>
+      <div class="work">
+        <h4>Multi-agent learning and decision systems (Client: deeplay.io)</h4>
+        <div class="where">Reinforcement learning · Self-play · Policy evaluation</div>
         <ul>
-          <li>Applied research delivered as working systems for industrial and startup clients — multi-agent learning, multi-modal analytics, computer vision on constrained hardware, and the data infrastructure underneath.</li>
+          <li>Built an end-to-end RL training pipeline for multi-agent decision-making in sequential games, including self-play rollout generation, opponent modeling with adaptive strategy selection, and policy evaluation against a legacy baseline.</li>
+          <li>Reached parity with an expert-authored rule-based system and removed the dependency on hand-crafted rules, turning a research prototype into a reusable training workflow.</li>
         </ul>
-      </details>
-      <details>
-        <summary>Highlights</summary>
+      </div>
+      <div class="work">
+        <h4>Multimodal analytics platform (Client: HeadKraken)</h4>
+        <div class="where">Telemetry · Video · Behavior analytics</div>
         <ul>
-          <li>Built an end-to-end reinforcement-learning pipeline for multi-agent decision-making — self-play rollouts, opponent modelling with adaptive strategy selection, policy evaluation against a legacy baseline — reaching parity with the expert-authored rule engine and retiring the dependency on hand-crafted rules. <span class="client">(client: deeplay.io)</span></li>
-          <li>Designed and built a multi-modal analytics platform end to end — ingestion and fusion of telemetry, video, text and biometric streams, anomaly detection over heterogeneous data, and the real-time dashboards non-technical staff watched live during events. <span class="client">(client: HeadKraken)</span></li>
-          <li>Real-time gesture recognition from 3D skeleton capture with spatial-temporal models, compressed to run at interactive latency on edge devices. <span class="client">(client: Huawei)</span></li>
-          <li>Integrated tensor-storage data lakes into distributed training pipelines — tuned data loaders and migrated datasets, removing the input bottleneck for GPU jobs. <span class="client">(client: activeloop.io)</span></li>
+          <li>Designed and built a multimodal analytics platform for an international startup, fusing telemetry, video, text, and biometric signals into real-time dashboards for live events.</li>
+          <li>Added anomaly detection over heterogeneous behavioral data to surface unusual patterns and support operational decision-making in event-scale deployments.</li>
         </ul>
-      </details>
+      </div>
+      <div class="work">
+        <h4>Gesture-to-command system (Client: Huawei)</h4>
+        <div class="where">Computer vision · Edge inference · Sensor fusion</div>
+        <ul>
+          <li>Built a real-time gesture-to-command system in the Skoltech Tensor Compression Lab, compressing multimodal sensor workflows and spatial-temporal models for 3D gesture recognition.</li>
+          <li>Optimized the solution for interactive latency and robust inference on edge devices, balancing accuracy, compression, and real-time performance.</li>
+        </ul>
+      </div>
       <div class="stack">
         <span class="tag">PyTorch</span><span class="tag">Reinforcement learning</span><span class="tag">Computer vision</span><span class="tag">Sensor fusion</span><span class="tag">Edge inference</span><span class="tag">Real-time dashboards</span><span class="tag">Anomaly detection</span>
       </div>
@@ -378,19 +488,13 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
       <h3>FusionSoft</h3>
       <p class="sub">Software Engineer · software development studio</p>
       <div class="meta"><span>December 2017 — March 2019</span><span>📍 Lipetsk, Russia</span></div>
-      <details open>
-        <summary>What the work is</summary>
+      <div class="work">
+        <h4>Kubernetes-native MLOps and GPU job orchestration (Client: Neuromation.io)</h4>
+        <div class="where">MLOps · Distributed training · Synthetic data</div>
         <ul>
-          <li>Backend and platform engineering for international clients — enterprise analytics and Kubernetes-native ML infrastructure.</li>
+          <li>Built and debugged GPU job orchestration for an international AI platform startup on its Kubernetes-native MLOps platform for distributed training and synthetic-data generation.</li>
         </ul>
-      </details>
-      <details>
-        <summary>Highlights</summary>
-        <ul>
-          <li>Designed and developed a scalable, high-load enterprise analytics platform replacing legacy SAP modules — relational data model, backend services and the analytics front end — reducing analytics query time from days to seconds. <span class="client">(client: La Lumière)</span></li>
-          <li>Built and debugged GPU job orchestration on a Kubernetes-native MLOps platform for distributed training and synthetic-data generation — per-job cluster provisioning from manifests, reproducible delivery pipelines and CI/CD. <span class="client">(client: Neuromation.io)</span></li>
-        </ul>
-      </details>
+      </div>
       <div class="stack">
         <span class="tag">Kubernetes</span><span class="tag">CI/CD</span><span class="tag">PostgreSQL</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">High-load</span><span class="tag">SAP replacement</span>
       </div>
@@ -400,20 +504,14 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
       <h3>Lipetsk State Technical University</h3>
       <p class="sub">Assistant / Associate Professor</p>
       <div class="meta"><span>February 2010 — December 2017</span><span>📍 Lipetsk, Russia</span></div>
-      <details open>
-        <summary>What the work is</summary>
+      <div class="work">
+        <h4>Teaching and applied ML research</h4>
+        <div class="where">Education · Optimization · Computer vision</div>
         <ul>
-          <li>Taught machine learning, optimization, numerical methods and probability theory for seven years, supervised 8 graduate students, and built the research infrastructure behind applied prototypes for industry partners.</li>
+          <li>Taught machine learning, optimization, numerical methods, and probability theory for seven years; supervised 8 graduate students and authored 7 peer-reviewed publications.</li>
+          <li>Built ML research infrastructure and delivered applied prototypes to transportation and logistics partners, including a vision-based localization system that improved robotic navigation flexibility on manufacturing lines by replacing hardcoded routes.</li>
         </ul>
-      </details>
-      <details>
-        <summary>Highlights</summary>
-        <ul>
-          <li>Improved robotic navigation flexibility on manufacturing lines by replacing hardcoded routes with neural vision-based localization. <span class="client">(client: Indesit)</span></li>
-          <li>7 peer-reviewed publications and talks at more than 20 international and regional conferences.</li>
-          <li>Seven years of making technical material land with people who did not already share the background — the same skill the customer-facing half of my work runs on.</li>
-        </ul>
-      </details>
+      </div>
       <div class="stack">
         <span class="tag">Teaching</span><span class="tag">Computer vision</span><span class="tag">Robotics</span><span class="tag">Optimization</span><span class="tag">Research</span>
       </div>
@@ -424,7 +522,43 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
 <section class="sec" id="skills">
   <div class="wrap">
     <h2>Skills</h2>
-    <p class="lede">Years are years of production use, not exposure.</p>
+
+    <div class="skill-board">
+    <figure class="areas">
+      <svg class="radar" viewBox="10 68 420 276" role="img" aria-label="Areas of expertise, clockwise from the top: Agents 5, Inference 5, Evaluation 4, Retrieval 3, Vision 4, Training 4, MLOps 5, Data 4, out of 5. Agents is the current area.">
+        <g fill="none" stroke="rgba(47,111,158,.45)" stroke-width="1">
+          <polygon points="210.0,185.0 224.1,190.9 230.0,205.0 224.1,219.1 210.0,225.0 195.9,219.1 190.0,205.0 195.9,190.9"/>
+          <polygon points="210.0,165.0 238.3,176.7 250.0,205.0 238.3,233.3 210.0,245.0 181.7,233.3 170.0,205.0 181.7,176.7"/>
+          <polygon points="210.0,145.0 252.4,162.6 270.0,205.0 252.4,247.4 210.0,265.0 167.6,247.4 150.0,205.0 167.6,162.6"/>
+          <polygon points="210.0,125.0 266.6,148.4 290.0,205.0 266.6,261.6 210.0,285.0 153.4,261.6 130.0,205.0 153.4,148.4"/>
+          <polygon points="210.0,105.0 280.7,134.3 310.0,205.0 280.7,275.7 210.0,305.0 139.3,275.7 110.0,205.0 139.3,134.3"/>
+        </g>
+        <g stroke="rgba(142,180,210,.35)" stroke-width="1">
+          <line x1="210" y1="205" x2="210.0" y2="105.0"/>
+          <line x1="210" y1="205" x2="280.7" y2="134.3"/>
+          <line x1="210" y1="205" x2="310.0" y2="205.0"/>
+          <line x1="210" y1="205" x2="280.7" y2="275.7"/>
+          <line x1="210" y1="205" x2="210.0" y2="305.0"/>
+          <line x1="210" y1="205" x2="139.3" y2="275.7"/>
+          <line x1="210" y1="205" x2="110.0" y2="205.0"/>
+          <line x1="210" y1="205" x2="139.3" y2="134.3"/>
+        </g>
+        <polygon points="210.0,105.0 280.7,134.3 290.0,205.0 252.4,247.4 210.0,285.0 153.4,261.6 110.0,205.0 153.4,148.4"
+          fill="rgba(224,138,60,.28)" stroke="#e08a3c" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="210" cy="105" r="3.5" fill="#e08a3c"/>
+        <g font-size="17" font-weight="700" dominant-baseline="central">
+          <text x="210" y="87" text-anchor="middle" fill="#f3c9a4">Agents</text>
+          <text x="293.4" y="121.6" text-anchor="start" fill="#e6edf5">Inference</text>
+          <text x="328" y="205" text-anchor="start" fill="#e6edf5">Evaluation</text>
+          <text x="293.4" y="288.4" text-anchor="start" fill="#e6edf5">Retrieval</text>
+          <text x="210" y="323" text-anchor="middle" fill="#e6edf5">Vision</text>
+          <text x="126.6" y="288.4" text-anchor="end" fill="#e6edf5">Training</text>
+          <text x="92" y="205" text-anchor="end" fill="#e6edf5">MLOps</text>
+          <text x="126.6" y="121.6" text-anchor="end" fill="#e6edf5">Data</text>
+        </g>
+      </svg>
+    </figure>
+    <div class="skill-groups">
 
     <div class="group">
       <div class="gname">Agentic &amp; LLM systems</div>
@@ -479,6 +613,8 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
         <span class="skill"><b>LightGBM / scikit-learn</b><span>6 yrs</span></span>
       </div>
     </div>
+    </div>
+    </div>
   </div>
 </section>
 
@@ -486,16 +622,14 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
   <div class="wrap">
     <h2>Education</h2>
     <div class="row">
-      <h3>Ph.D. in Applied Mathematics</h3>
-      <div class="meta">Voronezh State Technical University · 2010—2014</div>
-      <p>Thesis: numerical methods for modelling and control of multi-agent systems — neural-network-driven
-      coordination and control of cooperating agents, roughly a decade before the current wave of agentic AI.</p>
+      <h3>Voronezh State Technical University | Ph.D. in Applied Mathematics</h3>
+      <div class="meta">2010–2014</div>
+      <p>Thesis: numerical methods for modelling and control of multi-agent systems — created new techniques to make agentic neural network models more interpretable and transparent for real-world scenarios.</p>
     </div>
     <div class="row">
-      <h3>Specialist in Applied Mathematics</h3>
-      <div class="meta">Lipetsk State Technical University · 2005—2010</div>
-      <p>Five-year degree, equivalent to B.Sc. + M.Sc. Thesis: computer vision and algebraic methods for
-      autonomous robot control — neural-network control of a robotic hand under physics-based constraints.</p>
+      <h3>Lipetsk State Technical University | Specialist in Applied Mathematics</h3>
+      <div class="meta">2005–2010</div>
+      <p>Five-year degree, equivalent to B.Sc. + M.Sc. Thesis: computer vision and algebraic methods for autonomous robot control — built neural-network control of a robotic hand under physics-based constraints.</p>
     </div>
   </div>
 </section>
@@ -506,7 +640,8 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <div class="skills">
       <span class="skill"><b>English</b><span>professional</span></span>
       <span class="skill"><b>Russian</b><span>native</span></span>
-      <span class="skill"><b>Finnish</b><span>conversational, improving</span></span>
+      <span class="skill"><b>Finnish</b><span>conversational</span></span>
+      <span class="skill"><b>German</b><span>conversational</span></span>
     </div>
   </div>
 </section>
@@ -516,28 +651,10 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <p>Dmitrii Nikolaev · Helsinki, Finland ·
        <a href="mailto:dmitrynvm@fastmail.com">dmitrynvm@fastmail.com</a> ·
        <a href="https://www.linkedin.com/in/dmitrynvm/" target="_blank" rel="noopener">LinkedIn</a> ·
-       <a href="https://gitlab.com/dmitrynvm" target="_blank" rel="noopener">GitLab</a></p>
+       <a href="https://github.com/dmitrynvm" target="_blank" rel="noopener">GitHub</a></p>
     <p><a href="#top">↑ Back to top</a></p>
   </div>
 </footer>
-
-<div class="toast" id="toast">Email address copied</div>
-
-<script>
-document.getElementById('copyMail').addEventListener('click', function(){
-  var mail='dmitrynvm@fastmail.com';
-  var done=function(){
-    var t=document.getElementById('toast');
-    t.classList.add('on');
-    setTimeout(function(){t.classList.remove('on');},1600);
-  };
-  if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(mail).then(done).catch(function(){window.prompt('Copy:',mail);});
-  } else {
-    window.prompt('Copy:',mail);
-  }
-});
-</script>
 
 </body>
 </html>

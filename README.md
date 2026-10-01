@@ -28,8 +28,8 @@ education → languages → footer. The colour palette is the six variables at t
 --ink     body text              --line     borders
 ```
 
-Experience entries are `<article class="job">` blocks with two `<details>` sections — "What the work is"
-is open by default, "Highlights" is collapsed. The jump navigation is a plain list of anchors; if you
+Experience entries are `<article class="job">` blocks. "What the work is" is a `<details>` section
+open by default. The jump navigation is a plain list of anchors; if you
 add or rename a job, update both the `id` on the article and the link in `<nav class="jump">`.
 
 ### Portrait and frame
@@ -59,6 +59,5 @@ To tune the porthole, edit these rules in `.hero-porthole`:
 
 - **No numbers that are not verified.** The percentages in `scratchpad/bullets.md` (40% token generation,
   30% VRAM, 28% MAP, 19% pricing accuracy, request volumes, latencies) appear nowhere on this page. A
-  public page is the worst place for a figure you cannot defend. Confirm them and they can be added to
-  the Highlights lists, where they would be the strongest content on the page.
+  public page is the worst place for a figure you cannot defend. Confirm them before adding them to a role.
 - **No gallery, hobbies, certificates or courses sections.** There is no material for them in this repo.
