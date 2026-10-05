@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dmitrii Nikolaev — Senior AI Engineer</title>
-<meta name="description" content="Senior AI Engineer · Agentic systems, LLM infrastructure and production AI · Helsinki, Finland">
+<title>Dmitrii Nikolaev — Senior ML Engineer</title>
+<meta name="description" content="Senior ML Engineer · LLM inference, distributed GPU training and production AI · Helsinki, Finland">
 <style>
 :root{
   --bg:#0c1622; --bg2:#111f2e; --card:#16283a; --card2:#1a2f44;
@@ -59,88 +59,8 @@ header.hero{padding:60px 0 40px;background:radial-gradient(700px 300px at 50% -8
   0 0 0 2.5px #1a2f44,0 0 0 3px rgba(224,138,60,.4),inset 0 0 0 1px rgba(230,237,245,.14),
   0 16px 40px rgba(0,0,0,.62)}
 
-.gauges{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0;position:relative;z-index:1}
-.gauges div{margin:0;background:rgba(8,16,26,.55);border:1px solid rgba(47,111,158,.5);
-  border-radius:9px;padding:7px 8px 6px}
-.gauges dd{margin:0;color:var(--accent);font-weight:700;font-size:clamp(15px,calc(var(--port) * .095),18px);
-  line-height:1;font-variant-numeric:tabular-nums}
-.gauges dt{margin:3px 0 0;color:var(--mut);font-size:clamp(10px,calc(var(--port) * .058),12px);
-  font-weight:600;letter-spacing:.02em}
-
-/* languages — hull plate under the portrait, same width as the photo */
-.langs{width:var(--port);margin:0;position:relative;overflow:hidden;
-  border-radius:18px;color:var(--ink);line-height:1.15;--rail:14px;
-  background:
-    radial-gradient(1.1px 1.1px at 93% 4%,#fff 70%,transparent),
-    radial-gradient(1px 1px at 6% 3%,#e6edf5 70%,transparent),
-    radial-gradient(1px 1px at 96% 97%,#fff 70%,transparent),
-    radial-gradient(1.1px 1.1px at 5% 96%,#cfe3f3 70%,transparent),
-    radial-gradient(120% 70% at 50% -10%,rgba(224,138,60,.16),transparent 46%),
-    radial-gradient(90% 50% at 80% 100%,rgba(47,111,158,.22),transparent 50%),
-    linear-gradient(180deg,#121e2c 0%,#0b1420 100%);
-  box-shadow:0 0 0 1px rgba(224,138,60,.45),0 0 0 2px #1a2f44,inset 0 0 0 1px rgba(230,237,245,.06),
-    0 14px 32px rgba(0,0,0,.4);
-  padding:calc(var(--port) * .07) calc(var(--port) * .05) calc(var(--port) * .06)}
-.langs::before{content:"";position:absolute;inset:5px;pointer-events:none;border-radius:13px;
-  background:
-    linear-gradient(var(--accent),var(--accent)) left top / 18% 1.5px no-repeat,
-    linear-gradient(var(--accent),var(--accent)) left top / 1.5px 8% no-repeat,
-    linear-gradient(var(--accent),var(--accent)) right top / 18% 1.5px no-repeat,
-    linear-gradient(var(--accent),var(--accent)) right top / 1.5px 8% no-repeat,
-    linear-gradient(var(--accent),var(--accent)) left bottom / 18% 1.5px no-repeat,
-    linear-gradient(var(--accent),var(--accent)) left bottom / 1.5px 8% no-repeat,
-    linear-gradient(var(--accent),var(--accent)) right bottom / 18% 1.5px no-repeat,
-    linear-gradient(var(--accent),var(--accent)) right bottom / 1.5px 8% no-repeat}
-.langs-top{display:flex;align-items:center;gap:6px;position:relative;z-index:1;margin:0 0 8px}
-.langs .ship{width:calc(var(--port) * .16);height:calc(var(--port) * .19);flex:0 0 auto;
-  filter:drop-shadow(0 0 6px rgba(224,138,60,.55))}
-.langs .eyebrow{margin:0;color:var(--accent);font-size:clamp(10px,calc(var(--port) * .058),12px);
-  font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.langs .vector{margin:2px 0 0;color:var(--mut);font-size:clamp(10px,calc(var(--port) * .052),11px)}
-.langs ol{list-style:none;margin:0;padding:2px 0 2px var(--rail);position:relative;z-index:1;
-  display:flex;flex-direction:column;gap:7px}
-.langs ol::before{content:"";position:absolute;left:calc(var(--rail) / 2 - 1px);top:6px;bottom:6px;width:2px;
-  border-radius:2px;
-  background:linear-gradient(180deg,var(--accent) 0%,#c47a3a 22%,var(--accent2) 70%,rgba(47,111,158,.25) 100%)}
-.langs li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;
-  column-gap:4px;position:relative;min-width:0}
-.langs li::before{content:"";position:absolute;left:calc(var(--rail) / -2);top:50%;width:7px;height:7px;
-  transform:translate(-50%,-50%);border-radius:50%;background:#0c1622;border:1.5px solid #8eb4d2;
-  box-shadow:0 0 0 2px #101a26}
-.langs .org{font-weight:700;font-size:clamp(11px,calc(var(--port) * .068),13px);
-  letter-spacing:-.02em;line-height:1.1;min-width:0}
-.langs .pips{display:flex;gap:2px}
-.langs .pips i{width:5px;height:5px;border-radius:1px;background:rgba(47,111,158,.35);display:block}
-.langs .pips i.on{background:var(--accent)}
-.langs .gauges{margin-top:10px}
-.skill-board{display:flex;flex-direction:column;gap:22px;align-items:flex-start;margin-top:18px}
-.skill-board .areas{flex:0 0 auto}
+.skill-board{margin-top:18px}
 .skill-board .skill-groups{width:100%;min-width:0}
-.areas{width:min(340px,100%);margin:0;position:relative;overflow:hidden;
-  border-radius:18px;
-  background:
-    radial-gradient(1.1px 1.1px at 96% 3%,#fff 70%,transparent),
-    radial-gradient(1px 1px at 3% 2%,#e6edf5 70%,transparent),
-    radial-gradient(1px 1px at 97% 98%,#fff 70%,transparent),
-    radial-gradient(1.1px 1.1px at 3% 97%,#cfe3f3 70%,transparent),
-    radial-gradient(120% 50% at 50% -20%,rgba(224,138,60,.16),transparent 46%),
-    radial-gradient(80% 40% at 100% 100%,rgba(47,111,158,.22),transparent 50%),
-    linear-gradient(180deg,#121e2c 0%,#0b1420 100%);
-  box-shadow:0 0 0 1px rgba(224,138,60,.45),0 0 0 2px #1a2f44,inset 0 0 0 1px rgba(230,237,245,.06),
-    0 14px 32px rgba(0,0,0,.4);
-  padding:8px 6px 6px}
-.areas::before{content:"";position:absolute;inset:6px;pointer-events:none;border-radius:13px;
-  background:
-    linear-gradient(var(--accent),var(--accent)) left top / 18% 1.5px no-repeat,
-    linear-gradient(var(--accent),var(--accent)) left top / 1.5px 8% no-repeat,
-    linear-gradient(var(--accent),var(--accent)) right top / 18% 1.5px no-repeat,
-    linear-gradient(var(--accent),var(--accent)) right top / 1.5px 8% no-repeat,
-    linear-gradient(var(--accent),var(--accent)) left bottom / 18% 1.5px no-repeat,
-    linear-gradient(var(--accent),var(--accent)) left bottom / 1.5px 8% no-repeat,
-    linear-gradient(var(--accent),var(--accent)) right bottom / 18% 1.5px no-repeat,
-    linear-gradient(var(--accent),var(--accent)) right bottom / 1.5px 8% no-repeat}
-.areas .radar{display:block;width:100%;height:auto;position:relative;z-index:1}
-.areas .radar text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 
 .hero-porthole.is-hud{border-radius:0;background:transparent;box-shadow:none;padding:0}
 .hero-porthole.is-hud:hover{box-shadow:none}
@@ -187,6 +107,18 @@ nav.jump{position:sticky;top:0;z-index:40;background:rgba(10,17,25,.92);backdrop
 nav.jump .wrap{display:flex;gap:16px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:thin}
 nav.jump a{color:var(--mut);font-size:.84rem;white-space:nowrap;font-weight:600}
 nav.jump a:hover{color:var(--accent);text-decoration:none}
+
+/* accordion */
+.accordion{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.accordion details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0;overflow:hidden}
+.accordion summary{cursor:pointer;list-style:none;padding:14px 16px;color:var(--accent);font-weight:800}
+.accordion summary::-webkit-details-marker{display:none}
+.accordion summary::before{content:"+ ";color:var(--mut);font-weight:800}
+.accordion details[open] summary{border-bottom:1px solid var(--line)}
+.accordion details[open] summary::before{content:"- "}
+.accordion .content{padding:4px 18px 16px}
+.accordion ol{margin:10px 0 0;padding-left:22px}
+.accordion li{margin-bottom:10px;color:var(--mut)}
 
 /* experience */
 .job{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
@@ -252,59 +184,17 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <img class="hero-photo" src="img/avatar.png"
          alt="Portrait of Dmitrii Nikolaev" width="190" height="190" loading="eager">
     </div>
-    <figure class="langs" aria-labelledby="langs-title">
-      <div class="langs-top">
-        <svg class="ship" viewBox="0 0 32 40" aria-hidden="true">
-          <path fill="#2f6f9e" d="M8.2 22.5c-4.2 1.6-7 4.2-7.2 4.6 2.6-.2 5.2-1.6 6.6-2.8-.1-.6-.2-1.2-.2-1.8h.8zM23.8 22.5h.8c0 .6-.1 1.2-.2 1.8 1.4 1.2 4 2.6 6.6 2.8-.2-.4-3-3-7.2-4.6z"/>
-          <path fill="#e08a3c" d="M16 1.5c.5 0 7.2 8.4 7.2 18.2 0 2.6-.7 4.5-1.7 5.8L25.6 30h-6.2L16 36.5 12.6 30H6.4l4.1-4.5c-1-1.3-1.7-3.2-1.7-5.8C8.8 9.9 15.5 1.5 16 1.5z"/>
-          <circle cx="16" cy="17.2" r="2.5" fill="#0c1622"/>
-          <path fill="#ffb067" d="M13.2 31.2h5.6l-1.5 4.2c-.4 1.1-1.8 1.1-2.2 0l-1.9-4.2z" opacity=".9"/>
-        </svg>
-        <div>
-          <p class="eyebrow" id="langs-title">Stack</p>
-          <p class="vector">Programming languages</p>
-        </div>
-      </div>
-      <ol>
-        <li aria-label="Python, 7 points">
-          <span class="org">Python</span>
-          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
-        </li>
-        <li aria-label="C++, 5 points">
-          <span class="org">C++</span>
-          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
-        </li>
-        <li aria-label="Java, 4 points">
-          <span class="org">Java</span>
-          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
-        </li>
-        <li aria-label="Go, 3 points">
-          <span class="org">Go</span>
-          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span>
-        </li>
-        <li aria-label="JavaScript, 6 points">
-          <span class="org">JavaScript</span>
-          <span class="pips" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
-        </li>
-      </ol>
-      <dl class="gauges">
-        <div><dd>7y</dd><dt>Industry</dt></div>
-        <div><dd>4y</dd><dt>Consulting</dt></div>
-        <div><dd>7y</dd><dt>Research</dt></div>
-        <div><dd>PhD</dd><dt>AI Agents</dt></div>
-      </dl>
-    </figure>
     </div>
     <div class="hero-main">
     <div class="name-row">
       <h1>Dmitrii Nikolaev</h1>
       <a class="cv" href="cv.pdf" download>CV</a>
     </div>
-    <p class="role"> ML Systems Engineer · GenAI &amp; LLM Infrastructure · Agentic Platform Engineer </p>
+    <p class="role">Senior ML Engineer · LLM Inference · Distributed GPU Training</p>
 
-    <p class="first">ML systems engineer and applied researcher with experience building, optimizing and evaluating deep-learning workloads across GPU and AI-accelerator platforms. Strong background in LLM training and inference, model optimization, quantization and performance engineering, with hands-on experience across PyTorch, ROCm/CUDA ecosystems, Megatron-LM, DeepSpeed and distributed training.</p>
+    <p class="first">Senior ML Engineer with 7+ years of industry experience building and optimizing production AI systems across LLM inference, distributed GPU training, RAG, evaluation, MLOps and edge inference. Most recently at AMD, I worked on vLLM/SGLang inference, DeepSpeed/Megatron-LM training workloads, ROCm/CUDA performance analysis, and agentic benchmarking systems that automate code changes, GPU allocation, experiment runs and reporting.</p>
 
-    <p class="more">Experienced in looking inside models rather than treating them as black boxes — instrumenting their runtime behavior, evaluating multi-agent LLM systems and measuring detection quality — and in bridging model-level requirements with hardware-aware optimization to improve efficiency, scalability and deployment performance. Ph.D. in Applied Mathematics, 7 years in academia with 7 peer-reviewed publications, and 7+ years delivering production ML/AI systems in Python and C++.</p>
+    <p class="more">I combine software engineering, applied ML and hardware-aware performance work: debugging low-level runtime issues, designing evaluation pipelines, bringing prototypes into production, and translating uncertain business or research problems into reliable systems. Ph.D. in Applied Mathematics, 7 years in academia, 7 peer-reviewed publications, and hands-on production work in Python, C++, SQL, Kubernetes, Azure and AWS.</p>
     </div><!-- /.hero-main -->
     </div><!-- /.hero-head -->
 
@@ -317,11 +207,11 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
         </div>
         <div>
           <div class="k">Focus</div>
-          <div class="v"><span class="tag">Agentic systems</span><span class="tag">LLM infrastructure</span><span class="tag">Applied AI delivery</span></div>
+          <div class="v"><span class="tag">LLM inference</span><span class="tag">Distributed training</span><span class="tag">Production AI</span></div>
         </div>
         <div>
           <div class="k">Open to work in</div>
-          <div class="v"><span class="tag">📍 Helsinki</span><span class="tag">📍 Tampere</span><span class="tag">🌍 Remote (EU)</span></div>
+          <div class="v"><span class="tag">Helsinki</span><span class="tag">Remote EU</span><span class="tag">Relocation</span></div>
         </div>
       </div>
     </div>
@@ -338,11 +228,9 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <a href="#fusionsoft">FusionSoft</a>
     <a href="#university">Academia</a>
     <a href="#skills">Skills</a>
-    <a href="areas.html">Areas</a>
-    <a href="stack.html">Stack</a>
-    <a href="lang.html">Code</a>
     <a href="#education">Education</a>
     <a href="#languages">Languages</a>
+    <a href="#publications">Publications</a>
   </div>
 </nav>
 
@@ -353,167 +241,202 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <article class="job" id="amd">
       <h3>AMD</h3>
       <p class="sub">Staff AI Engineer</p>
-      <div class="meta"><span>August 2024 — October 2026</span><span>📍 Helsinki, Finland</span></div>
+      <div class="meta"><span>August 2024 - October 2026</span><span>Helsinki, Finland</span></div>
       <div class="work">
-        <h4>Agentic harness for engineering teams</h4>
-        <div class="where">Automated benchmarking</div>
-        <p>Built a benchmark and evaluation harness for engineering teams to search parameter spaces, allocate cloud resources, run experiments, and produce reports people could actually use.</p>
+        <h4>Agentic benchmarking for GPU engineering</h4>
+        <div class="where">Internal AMD platform</div>
+        <p>Built an agentic benchmarking harness for intrusive testing and knowledge organization. Open-weight LLMs served through self-hosted vLLM endpoints drove agents that modified code, allocated cloud GPUs, ran experiments, and assembled reports for engineering teams.</p>
         <div class="stack">
-          <span class="tag">Python</span><span class="tag">MCP</span><span class="tag">Multi-agent</span><span class="tag">Claude Code</span><span class="tag">Kubernetes</span>
+          <span class="tag">Python</span><span class="tag">vLLM</span><span class="tag">Open-weight LLMs</span><span class="tag">Self-hosted endpoints</span><span class="tag">Agent workflows</span><span class="tag">Cloud GPU automation</span><span class="tag">Experiment sweeps</span><span class="tag">Report generation</span><span class="tag">Claude Code</span>
         </div>
       </div>
       <div class="work">
-        <h4>Distributed training on multi-GPU clusters (Client: AWS)</h4>
-        <div class="where">Language modelling</div>
+        <h4>LLM inference performance</h4>
+        <div class="where">vLLM / SGLang on ROCm and CUDA</div>
         <ul>
-          <li>Ran long-duration throughput/latency experiments to populate the inference platform with real workload data, identifying bottlenecks and unsuccessful benchmark attempts for evaluating features such as KV-cache shuffling and related optimizations.</li>
-          <li>Identified vLLM performance degradation on AMD hardware, including a critical indexing bug in the aiter/ROCm driver stack, and owned the cross-team correction process with the kernels team to resolve the root cause and restore expected behavior.</li>
-          <li>Isolated the remaining issue to memory-allocation and concurrency behavior under overlapping long-lived sessions, then fixed it through runtime configuration and allocation strategy rather than adding more GPUs. This eliminated the failure mode, improved effective parallelism by 55%, and added the issue to the benchmark harness so the same class of failure is caught before customer deployment.</li>
+          <li>Ran production-style LLM inference experiments with vLLM and SGLang for a top-tier cloud infrastructure provider, reaching 40,000 tokens/sec on an 8-GPU cluster.</li>
+          <li>Unblocked MiniMax 2.5 8-bit concurrent inference by tracing runtime failures through KV-cache behavior, quantization settings and memory allocation.</li>
+          <li>Found a critical indexing bug in AITER / ROCm, coordinated with the kernel team, and added the failure mode to the benchmark harness so it is caught before customer deployment.</li>
+          <li>Improved effective concurrent request handling by 55% through runtime configuration and allocation strategy instead of adding hardware.</li>
         </ul>
         <div class="stack">
-          <span class="tag">vLLM</span><span class="tag">SGLang</span><span class="tag">PyTorch</span><span class="tag">KV-cache</span><span class="tag">Quantization</span><span class="tag">ROCm</span><span class="tag">CUDA</span><span class="tag">Megatron-LM</span>
+          <span class="tag">vLLM</span><span class="tag">SGLang</span><span class="tag">ROCm</span><span class="tag">CUDA</span><span class="tag">AITER</span><span class="tag">KV-cache</span><span class="tag">8-bit quantization</span><span class="tag">8-GPU clusters</span><span class="tag">MiniMax 2.5</span><span class="tag">Throughput / latency profiling</span><span class="tag">Memory allocation tuning</span>
         </div>
       </div>
       <div class="work">
-        <h4>Distributed training on multi-GPU clusters (Client: Samsung)</h4>
-        <div class="where">Language modelling</div>
+        <h4>Distributed training acceleration</h4>
+        <div class="where">DeepSpeed / Megatron-LM</div>
         <ul>
-          <li>Created and owned a training benchmark library to isolate bottlenecks across the client’s distributed-training stack, covering the data, tensor, pipeline, and sequence-parallel dimensions used in Megatron-LM and large-scale multi-GPU training.</li>
-          <li>Identified the root cause: pipeline parallelism was not aligned with the hardware constraints, so the workload did not behave as expected compared with the NVIDIA reference setup. Roofline analysis exposed the mismatch between model-parallel configuration and memory/throughput limits, enabling targeted tuning and recovery.</li>
-          <li>Identified that DeepSpeed had not been adapted to the workload, leaving effective cluster utilization far below capacity. After GEMM tuning and hardware-aware configuration changes, training throughput increased by 75%, improving utilization and reducing production time-to-result.</li>
+          <li>Built and owned a distributed-training benchmark library covering data, tensor, pipeline and sequence parallelism for DeepSpeed and Megatron-LM workloads.</li>
+          <li>Used roofline analysis to find a pipeline-parallel layout mismatch between model configuration and hardware constraints.</li>
+          <li>Improved training throughput by 75% through GEMM tuning and hardware-aware parallel layout changes.</li>
         </ul>
         <div class="stack">
-          <span class="tag">DeepSpeed</span><span class="tag">Megatron-LM</span><span class="tag">Roofline</span><span class="tag">GEMM tuning</span><span class="tag">Observability</span>
+          <span class="tag">PyTorch</span><span class="tag">DeepSpeed</span><span class="tag">Megatron-LM</span><span class="tag">Data parallelism</span><span class="tag">Tensor parallelism</span><span class="tag">Pipeline parallelism</span><span class="tag">Sequence parallelism</span><span class="tag">Roofline analysis</span><span class="tag">GEMM tuning</span><span class="tag">Multi-GPU profiling</span>
         </div>
       </div>
       <div class="work">
-        <h4>Embedded AI inference project on AMD XDNA neural processing unit (Client: Microsoft)</h4>
-        <div class="where">Image generation · Super-resolution · Object detection</div>
+        <h4>GPU hardware evaluation and customer leadership</h4>
+        <div class="where">New GPU generations</div>
         <ul>
-          <li>Implemented tensor tiling for convolution, multi-head attention, lookup-table, and elementwise operations to fit embedded memory contraints in AMD XDNA codebase, contributing to a platform that delivers 1.3× CNN and 2.6× Transformer performance versus integrated-GPU execution through improved local-memory reuse and reduced external-memory traffic.</li>
-          <li>Validated and expanded regression-test coverage across all 4 implemented operator families by cross-validating C++ tiling outputs against Python reference implementations, while migrating proprietary tiling algorithms into compiled C++ components to conceal implementation details and preserve behavioral equivalence.</li>
+          <li>Benchmarked new GPU generations across ROCm and CUDA stacks and produced deployment instructions for customer-facing teams.</li>
+          <li>Led customer-facing technical work by scoping optimization goals, prioritizing experiments, defining metrics, explaining trade-offs and turning findings into next steps.</li>
         </ul>
         <div class="stack">
-          <span class="tag">C++20</span><span class="tag">Python</span><span class="tag">ONNX</span><span class="tag">Ryzen / Vitis AI Software</span>
+          <span class="tag">ROCm</span><span class="tag">CUDA</span><span class="tag">PyTorch benchmarks</span><span class="tag">GPU acceptance testing</span><span class="tag">Regression harnesses</span><span class="tag">Deployment instructions</span><span class="tag">Performance metrics</span><span class="tag">Customer debugging</span><span class="tag">Technical leadership</span>
         </div>
       </div>
       <div class="work">
-        <h4>Embedded AI inference project on AMD FPGA neural processing unit (Client: Xilinx)</h4>
-        <div class="where">Classification · Detection · Super-resolution</div>
+        <h4>Edge inference on FPGA and XDNA accelerators</h4>
+        <div class="where">Embedded AI runtime</div>
         <ul>
-          <li>Implemented Global Average Pooling and Normalization support in AMD's embedded FPGA inference codebase, enabling these operators on the 8-bit CNN acceleration path and contributing to ResNet-50 with ~1.8× higher throughput per watt.</li>
-          <li>Improved memory correctness for Global Average Pooling and Normalization by fitting them to embedded hardware constraints, eliminating ~153 KB of memory leaks — approximately 25% of the 619 KB removed across the full regression test suite.</li>
+          <li>Ported PyTorch inference workloads to next-generation FPGA accelerators and AMD XDNA spatial AI-engine arrays.</li>
+          <li>Implemented tiled C++20 operators for convolution, multi-head attention, lookup-table and elementwise execution under strict local-memory constraints.</li>
+          <li>Contributed to 1.3x CNN and 2.6x Transformer performance versus integrated GPU execution through improved data locality and reduced external-memory traffic.</li>
         </ul>
         <div class="stack">
-          <span class="tag">C++20</span><span class="tag">FPGA backend</span><span class="tag">ONNX</span><span class="tag">XRT</span><span class="tag">Valgrind</span><span class="tag">Memory optimization</span>
+          <span class="tag">C++20</span><span class="tag">Python</span><span class="tag">ONNX</span><span class="tag">FPGA</span><span class="tag">AMD XDNA</span><span class="tag">Vitis AI / XRT</span><span class="tag">Operator tiling</span><span class="tag">Convolution / MHA</span><span class="tag">LUT ops</span><span class="tag">Local-memory optimization</span><span class="tag">Regression tests</span>
         </div>
       </div>
     </article>
 
     <article class="job" id="siloai">
       <h3>Silo AI</h3>
-      <p class="sub">Senior AI Engineer · AI R&amp;D lab</p>
-      <div class="meta"><span>November 2023 — August 2024</span><span>📍 Helsinki, Finland</span></div>
+      <p class="sub">Senior AI Engineer</p>
+      <div class="meta"><span>November 2023 - August 2024</span><span>Helsinki, Finland</span></div>
       <div class="work">
-        <h4>AI-vs-human code detection (Client: SEMA Technologies)</h4>
-        <div class="where">Code quality · Detection · Evaluation</div>
-        <p>Built AI-vs-human code detection, together with LLM-based code generation and coding-standards compliance checking, and created evaluation pipelines to measure detection quality and decide which capabilities were worth scaling further. On the first deployed detection loop, the system reached roughly 90% precision at ~80% recall, which let the team cut manual review effort by about 60% while keeping false positives manageable.</p>
-      </div>
-      <div class="stack">
-        <span class="tag">LLM evaluation</span><span class="tag">Code quality</span><span class="tag">Detection</span><span class="tag">Python</span><span class="tag">LLM</span>
+        <h4>LLM evaluation for AI-written code</h4>
+        <div class="where">Code generation / detection</div>
+        <p>Built LLM-based generation and evaluation workflows to distinguish AI-written code from human-written code. The deployed detection loop reached about 90% precision at 80% recall and reduced manual review effort by roughly 60%.</p>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">LLM evaluation</span><span class="tag">Code generation</span><span class="tag">AI-code detection</span><span class="tag">Precision / recall metrics</span><span class="tag">Eval datasets</span><span class="tag">Coding-standard checks</span><span class="tag">Review automation</span>
+        </div>
       </div>
 
       <div class="work">
-        <h4>Predictive pricing system (Client: Assa Abloy)</h4>
-        <div class="where">Pricing · Forecasting · Azure AI</div>
-        <p>Delivered a predictive pricing solution for an enterprise client: gradient-boosting models built and deployed on Azure AI Foundry and served through managed Azure AI endpoints, from feasibility exploration with business stakeholders to a working product. The model improved forecast accuracy by roughly 15–20% versus the baseline, reducing quote variance and giving sales teams materially more reliable pricing signals.</p>
-      </div>
-      <div class="stack">
-        <span class="tag">LightGBM</span><span class="tag">Azure AI Foundry</span><span class="tag">Azure AI endpoints</span><span class="tag">Python</span>
-      </div>
-
-      <div class="work">
-        <h4>Retrieval from a customer's own record (Client: Nokia)</h4>
-        <div class="where">Patent search · Retrieval · Evaluation</div>
-        <p>A patent team often missed relevant prior art that keyword search could not find. I built a hybrid retrieval flow over PostgreSQL — vector plus keyword search with an LLM re-ranking pass — that searched only their own corpus and returned results grounded in the documents they actually use. The evaluation set was built from their experts' own relevance judgments, so improvements were measured against the standards they already trusted. The system improved top-10 recall materially over keyword-only search and reduced the time to find relevant prior art from hours to minutes.</p>
-      </div>
-      <div class="stack">
-        <span class="tag">RAG</span><span class="tag">PostgreSQL</span><span class="tag">Hybrid search</span><span class="tag">LLM re-ranking</span><span class="tag">LightGBM</span><span class="tag">Azure AI Foundry</span><span class="tag">LoRA</span><span class="tag">Diffusers</span><span class="tag">Evaluation</span><span class="tag">Python</span>
+        <h4>RAG patent search</h4>
+        <div class="where">Hybrid retrieval / LLM reranking</div>
+        <p>Built a patent-search system for a global telecom customer using PostgreSQL-backed hybrid retrieval and LLM reranking. Expert relevance judgments drove the evaluation, and the workflow reduced prior-art search from hours to minutes.</p>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Vector search</span><span class="tag">Keyword search</span><span class="tag">Hybrid retrieval</span><span class="tag">LLM reranking</span><span class="tag">Patent corpus</span><span class="tag">Expert relevance judgments</span><span class="tag">Retrieval evaluation</span>
+        </div>
       </div>
 
       <div class="work">
-        <h4>Text-to-image platform (Product: SiloSnap)</h4>
-        <div class="where">Image generation · LoRA fine-tuning · Production service</div>
-        <p>Owned the ML feature work for an in-house text-to-image platform, from product functionality to production deployment. I implemented LoRA fine-tuning and multi-LoRA layer merging to achieve target style compositions without full retraining, and built the workflow to support repeated product iterations instead of one-off experiments.</p>
+        <h4>Fine-tuned avatar-generation service</h4>
+        <div class="where">LoRA / diffusion / productionization</div>
+        <p>Took an avatar-generation service from product concept to production. Implemented LoRA diffusion fine-tuning and subject/style adapters to support repeated product iterations without full retraining.</p>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">Diffusers</span><span class="tag">LoRA fine-tuning</span><span class="tag">Multi-LoRA merging</span><span class="tag">Subject adapters</span><span class="tag">Style adapters</span><span class="tag">Image generation</span><span class="tag">Production service</span>
+        </div>
       </div>
-      <div class="stack">
-        <span class="tag">LoRA</span><span class="tag">Diffusers</span><span class="tag">Image generation</span><span class="tag">Production AI</span><span class="tag">Python</span>
+
+      <div class="work">
+        <h4>Predictive pricing on Azure AI Foundry</h4>
+        <div class="where">Forecasting / managed AI endpoints</div>
+        <p>Delivered a predictive pricing model with LightGBM on Azure AI Foundry, served through managed Azure AI endpoints. The solution improved forecast accuracy by about 15-20% against the baseline and provided more reliable pricing signals to sales teams.</p>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">LightGBM</span><span class="tag">Azure AI Foundry</span><span class="tag">Managed Azure AI endpoints</span><span class="tag">Pricing models</span><span class="tag">Forecast evaluation</span><span class="tag">Model deployment</span><span class="tag">Business stakeholder feedback</span>
+        </div>
       </div>
     </article>
 
     <article class="job" id="skoltech">
       <h3>Skolkovo Institute of Science and Technology</h3>
-      <p class="sub">Software / Research AI Engineer · AI R&amp;D lab</p>
-      <div class="meta"><span>July 2019 — April 2023</span><span>📍 Moscow, Russia</span></div>
+      <p class="sub">Software / Research AI Engineer</p>
+      <div class="meta"><span>July 2019 - April 2023</span><span>Moscow, Russia</span></div>
       <div class="work">
-        <h4>Multi-agent learning and decision systems (Client: deeplay.io)</h4>
-        <div class="where">Reinforcement learning · Self-play · Policy evaluation</div>
+        <h4>Multimodal esports analytics</h4>
+        <div class="where">Funded by Riot Games / live-event analytics</div>
         <ul>
-          <li>Built an end-to-end RL training pipeline for multi-agent decision-making in sequential games, including self-play rollout generation, opponent modeling with adaptive strategy selection, and policy evaluation against a legacy baseline.</li>
-          <li>Reached parity with an expert-authored rule-based system and removed the dependency on hand-crafted rules, turning a research prototype into a reusable training workflow.</li>
-        </ul>
-      </div>
-      <div class="work">
-        <h4>Multimodal analytics platform (Client: HeadKraken)</h4>
-        <div class="where">Telemetry · Video · Behavior analytics</div>
-        <ul>
-          <li>Designed and built a multimodal analytics platform for an international startup, fusing telemetry, video, text, and biometric signals into real-time dashboards for live events.</li>
+          <li>Designed and built a multimodal analytics platform for an international startup, fusing telemetry, video, text and biometric signals into real-time predictions, dashboards and anomaly alerts for live events.</li>
           <li>Added anomaly detection over heterogeneous behavioral data to surface unusual patterns and support operational decision-making in event-scale deployments.</li>
+          <li>Converted research prototypes into reusable data and training workflows for production-oriented analytics.</li>
         </ul>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Telemetry data</span><span class="tag">Video streams</span><span class="tag">Text features</span><span class="tag">Biometric signals</span><span class="tag">Multimodal fusion</span><span class="tag">Real-time dashboards</span><span class="tag">Anomaly detection</span><span class="tag">Live events</span>
+        </div>
       </div>
       <div class="work">
-        <h4>Gesture-to-command system (Client: Huawei)</h4>
-        <div class="where">Computer vision · Edge inference · Sensor fusion</div>
+        <h4>Reinforcement-learning pipeline</h4>
+        <div class="where">Self-play / opponent modeling</div>
+        <ul>
+          <li>Built an end-to-end RL training pipeline for multi-agent decision-making in sequential games, including self-play rollout generation and opponent modeling with adaptive strategy selection.</li>
+          <li>Matched an expert rule-based system and replaced handwritten decision rules with learned policies.</li>
+          <li>Evaluated policies against a legacy baseline and turned the research prototype into a reusable training workflow.</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Reinforcement learning</span><span class="tag">Self-play</span><span class="tag">Opponent modeling</span><span class="tag">Adaptive strategy selection</span><span class="tag">Policy evaluation</span><span class="tag">Multi-agent decision systems</span><span class="tag">Game AI</span>
+        </div>
+      </div>
+      <div class="work">
+        <h4>Gesture-to-command system</h4>
+        <div class="where">Computer vision / edge inference / sensor fusion</div>
         <ul>
           <li>Built a real-time gesture-to-command system in the Skoltech Tensor Compression Lab, compressing multimodal sensor workflows and spatial-temporal models for 3D gesture recognition.</li>
-          <li>Optimized the solution for interactive latency and robust inference on edge devices, balancing accuracy, compression, and real-time performance.</li>
+          <li>Optimized the solution for interactive latency and robust inference on edge devices, balancing accuracy, compression and real-time performance.</li>
         </ul>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Computer vision</span><span class="tag">3D gesture recognition</span><span class="tag">Sensor fusion</span><span class="tag">Spatial-temporal models</span><span class="tag">Model compression</span><span class="tag">Edge inference</span><span class="tag">Latency optimization</span>
+        </div>
       </div>
-      <div class="stack">
-        <span class="tag">PyTorch</span><span class="tag">Reinforcement learning</span><span class="tag">Computer vision</span><span class="tag">Sensor fusion</span><span class="tag">Edge inference</span><span class="tag">Real-time dashboards</span><span class="tag">Anomaly detection</span>
+      <div class="work">
+        <h4>Data lakes for distributed training</h4>
+        <div class="where">Tensor storage / PyTorch loaders</div>
+        <ul>
+          <li>Moved tensor-storage data lakes into distributed training workflows and tuned PyTorch dataloaders for higher throughput.</li>
+          <li>Supported dataset migration and reusable training infrastructure for ML research teams.</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">Python</span><span class="tag">PyTorch dataloaders</span><span class="tag">Tensor storage</span><span class="tag">Data lakes</span><span class="tag">Distributed training</span><span class="tag">Dataset migration</span><span class="tag">Training throughput</span><span class="tag">Research infrastructure</span>
+        </div>
       </div>
     </article>
 
     <article class="job" id="fusionsoft">
       <h3>FusionSoft</h3>
-      <p class="sub">Software Engineer · software development studio</p>
-      <div class="meta"><span>December 2017 — March 2019</span><span>📍 Lipetsk, Russia</span></div>
+      <p class="sub">Software Engineer</p>
+      <div class="meta"><span>December 2017 - March 2019</span><span>Lipetsk, Russia</span></div>
       <div class="work">
-        <h4>Kubernetes-native MLOps and GPU job orchestration (Client: Neuromation.io)</h4>
-        <div class="where">MLOps · Distributed training · Synthetic data</div>
+        <h4>GPU job orchestration for Kubernetes-native MLOps</h4>
+        <div class="where">Model delivery / CI/CD</div>
         <ul>
-          <li>Built and debugged GPU job orchestration for an international AI platform startup on its Kubernetes-native MLOps platform for distributed training and synthetic-data generation.</li>
+          <li>Built dynamic per-job cluster provisioning from YAML specifications for a Kubernetes-native MLOps platform.</li>
+          <li>Implemented reproducible model-delivery pipelines and GitHub Actions CI/CD for distributed training and synthetic-data workflows.</li>
         </ul>
+        <div class="stack">
+          <span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">YAML job specs</span><span class="tag">GPU job orchestration</span><span class="tag">Dynamic cluster provisioning</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span><span class="tag">Synthetic data</span><span class="tag">MLOps pipelines</span>
+        </div>
       </div>
-      <div class="stack">
-        <span class="tag">Kubernetes</span><span class="tag">CI/CD</span><span class="tag">PostgreSQL</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">High-load</span><span class="tag">SAP replacement</span>
+      <div class="work">
+        <h4>High-load enterprise analytics</h4>
+        <div class="where">SAP replacement / analytics platform</div>
+        <ul>
+          <li>Designed and developed a high-load enterprise analytics platform replacing legacy SAP reporting modules for an international client.</li>
+          <li>Reduced analytical query time from days to seconds through backend and database optimization.</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">PostgreSQL</span><span class="tag">High-load backend</span><span class="tag">SQL optimization</span><span class="tag">Enterprise analytics</span><span class="tag">Legacy SAP replacement</span><span class="tag">Reporting workflows</span>
+        </div>
       </div>
     </article>
 
     <article class="job" id="university">
       <h3>Lipetsk State Technical University</h3>
       <p class="sub">Assistant / Associate Professor</p>
-      <div class="meta"><span>February 2010 — December 2017</span><span>📍 Lipetsk, Russia</span></div>
+      <div class="meta"><span>February 2010 - December 2017</span><span>Lipetsk, Russia</span></div>
       <div class="work">
         <h4>Teaching and applied ML research</h4>
-        <div class="where">Education · Optimization · Computer vision</div>
+        <div class="where">ML / optimization / robotics</div>
         <ul>
-          <li>Taught machine learning, optimization, numerical methods, and probability theory for seven years; supervised 8 graduate students and authored 7 peer-reviewed publications.</li>
-          <li>Built ML research infrastructure and delivered applied prototypes to transportation and logistics partners, including a vision-based localization system that improved robotic navigation flexibility on manufacturing lines by replacing hardcoded routes.</li>
+          <li>Taught machine learning, optimization, numerical methods and probability theory.</li>
+          <li>Supervised 8 graduate students and authored 7 peer-reviewed publications.</li>
+          <li>Built ML research infrastructure and delivered applied ML/control prototypes to transportation and logistics partners.</li>
+          <li>Developed a vision-based robot localization system that improved navigation flexibility on manufacturing lines by replacing hardcoded routes.</li>
         </ul>
-      </div>
-      <div class="stack">
-        <span class="tag">Teaching</span><span class="tag">Computer vision</span><span class="tag">Robotics</span><span class="tag">Optimization</span><span class="tag">Research</span>
+        <div class="stack">
+          <span class="tag">Machine learning</span><span class="tag">Optimization</span><span class="tag">Numerical methods</span><span class="tag">Probability theory</span><span class="tag">Computer vision</span><span class="tag">Robot localization</span><span class="tag">Control systems</span><span class="tag">Manufacturing navigation</span><span class="tag">Graduate supervision</span><span class="tag">Research publications</span>
+        </div>
       </div>
     </article>
   </div>
@@ -524,93 +447,68 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <h2>Skills</h2>
 
     <div class="skill-board">
-    <figure class="areas">
-      <svg class="radar" viewBox="10 68 420 276" role="img" aria-label="Areas of expertise, clockwise from the top: Agents 5, Inference 5, Evaluation 4, Retrieval 3, Vision 4, Training 4, MLOps 5, Data 4, out of 5. Agents is the current area.">
-        <g fill="none" stroke="rgba(47,111,158,.45)" stroke-width="1">
-          <polygon points="210.0,185.0 224.1,190.9 230.0,205.0 224.1,219.1 210.0,225.0 195.9,219.1 190.0,205.0 195.9,190.9"/>
-          <polygon points="210.0,165.0 238.3,176.7 250.0,205.0 238.3,233.3 210.0,245.0 181.7,233.3 170.0,205.0 181.7,176.7"/>
-          <polygon points="210.0,145.0 252.4,162.6 270.0,205.0 252.4,247.4 210.0,265.0 167.6,247.4 150.0,205.0 167.6,162.6"/>
-          <polygon points="210.0,125.0 266.6,148.4 290.0,205.0 266.6,261.6 210.0,285.0 153.4,261.6 130.0,205.0 153.4,148.4"/>
-          <polygon points="210.0,105.0 280.7,134.3 310.0,205.0 280.7,275.7 210.0,305.0 139.3,275.7 110.0,205.0 139.3,134.3"/>
-        </g>
-        <g stroke="rgba(142,180,210,.35)" stroke-width="1">
-          <line x1="210" y1="205" x2="210.0" y2="105.0"/>
-          <line x1="210" y1="205" x2="280.7" y2="134.3"/>
-          <line x1="210" y1="205" x2="310.0" y2="205.0"/>
-          <line x1="210" y1="205" x2="280.7" y2="275.7"/>
-          <line x1="210" y1="205" x2="210.0" y2="305.0"/>
-          <line x1="210" y1="205" x2="139.3" y2="275.7"/>
-          <line x1="210" y1="205" x2="110.0" y2="205.0"/>
-          <line x1="210" y1="205" x2="139.3" y2="134.3"/>
-        </g>
-        <polygon points="210.0,105.0 280.7,134.3 290.0,205.0 252.4,247.4 210.0,285.0 153.4,261.6 110.0,205.0 153.4,148.4"
-          fill="rgba(224,138,60,.28)" stroke="#e08a3c" stroke-width="2" stroke-linejoin="round"/>
-        <circle cx="210" cy="105" r="3.5" fill="#e08a3c"/>
-        <g font-size="17" font-weight="700" dominant-baseline="central">
-          <text x="210" y="87" text-anchor="middle" fill="#f3c9a4">Agents</text>
-          <text x="293.4" y="121.6" text-anchor="start" fill="#e6edf5">Inference</text>
-          <text x="328" y="205" text-anchor="start" fill="#e6edf5">Evaluation</text>
-          <text x="293.4" y="288.4" text-anchor="start" fill="#e6edf5">Retrieval</text>
-          <text x="210" y="323" text-anchor="middle" fill="#e6edf5">Vision</text>
-          <text x="126.6" y="288.4" text-anchor="end" fill="#e6edf5">Training</text>
-          <text x="92" y="205" text-anchor="end" fill="#e6edf5">MLOps</text>
-          <text x="126.6" y="121.6" text-anchor="end" fill="#e6edf5">Data</text>
-        </g>
-      </svg>
-    </figure>
     <div class="skill-groups">
 
     <div class="group">
-      <div class="gname">Agentic &amp; LLM systems</div>
+      <div class="gname">LLM inference</div>
       <div class="skills">
-        <span class="skill"><b>Multi-agent orchestration</b><span>3 yrs</span></span>
-        <span class="skill"><b>MCP tool servers</b><span>2 yrs</span></span>
-        <span class="skill"><b>Context engineering</b><span>3 yrs</span></span>
-        <span class="skill"><b>RAG / hybrid retrieval</b><span>3 yrs</span></span>
-        <span class="skill"><b>Evaluation pipelines</b><span>3 yrs</span></span>
-        <span class="skill"><b>LoRA fine-tuning</b><span>2 yrs</span></span>
-        <span class="skill"><b>Claude Code / Codex / Cursor</b><span>2 yrs</span></span>
+        <span class="skill"><b>vLLM</b><span>serving</span></span>
+        <span class="skill"><b>SGLang</b><span>serving</span></span>
+        <span class="skill"><b>KV-cache</b><span>profiling</span></span>
+        <span class="skill"><b>Continuous batching</b><span>tuning</span></span>
+        <span class="skill"><b>Quantization</b><span>8-bit</span></span>
+        <span class="skill"><b>Multi-GPU serving</b><span>benchmarking</span></span>
+        <span class="skill"><b>Latency / throughput</b><span>analysis</span></span>
       </div>
     </div>
 
     <div class="group">
-      <div class="gname">Inference &amp; training infrastructure</div>
+      <div class="gname">Training and post-training</div>
       <div class="skills">
-        <span class="skill"><b>vLLM</b><span>2 yrs</span></span>
-        <span class="skill"><b>SGLang</b><span>1 yr</span></span>
-        <span class="skill"><b>KV-cache &amp; batching</b><span>2 yrs</span></span>
-        <span class="skill"><b>Quantization</b><span>2 yrs</span></span>
-        <span class="skill"><b>DeepSpeed / Megatron-LM</b><span>2 yrs</span></span>
-        <span class="skill"><b>ROCm / CUDA</b><span>2 yrs</span></span>
-        <span class="skill"><b>PyTorch</b><span>7 yrs</span></span>
+        <span class="skill"><b>PyTorch</b><span>7+ yrs</span></span>
+        <span class="skill"><b>DeepSpeed</b><span>distributed</span></span>
+        <span class="skill"><b>Megatron-LM</b><span>parallelism</span></span>
+        <span class="skill"><b>Data / tensor / pipeline parallelism</b><span>design</span></span>
+        <span class="skill"><b>LoRA fine-tuning</b><span>diffusion</span></span>
+        <span class="skill"><b>Evaluation pipelines</b><span>quality</span></span>
       </div>
     </div>
 
     <div class="group">
-      <div class="gname">Engineering &amp; platform</div>
+      <div class="gname">GPU performance and edge inference</div>
+      <div class="skills">
+        <span class="skill"><b>ROCm</b><span>debugging</span></span>
+        <span class="skill"><b>CUDA</b><span>benchmarking</span></span>
+        <span class="skill"><b>Roofline analysis</b><span>training</span></span>
+        <span class="skill"><b>GEMM tuning</b><span>performance</span></span>
+        <span class="skill"><b>C++20 kernels</b><span>NPU</span></span>
+        <span class="skill"><b>FPGA / XDNA</b><span>edge AI</span></span>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="gname">RAG, evaluation and agentic benchmarking</div>
+      <div class="skills">
+        <span class="skill"><b>Hybrid retrieval</b><span>vector + keyword</span></span>
+        <span class="skill"><b>PostgreSQL search</b><span>production</span></span>
+        <span class="skill"><b>LLM reranking</b><span>RAG</span></span>
+        <span class="skill"><b>Expert-judgment eval sets</b><span>quality</span></span>
+        <span class="skill"><b>AI-code detection</b><span>precision / recall</span></span>
+        <span class="skill"><b>Agentic benchmark harnesses</b><span>automation</span></span>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="gname">Cloud, MLOps and software engineering</div>
       <div class="skills">
         <span class="skill"><b>Python</b><span>7+ yrs</span></span>
-        <span class="skill"><b>PostgreSQL</b><span>6 yrs</span></span>
-        <span class="skill"><b>FastAPI / REST</b><span>5 yrs</span></span>
-        <span class="skill"><b>Docker</b><span>7 yrs</span></span>
-        <span class="skill"><b>Kubernetes</b><span>6 yrs</span></span>
-        <span class="skill"><b>CI/CD</b><span>7 yrs</span></span>
-        <span class="skill"><b>Azure</b><span>3 yrs</span></span>
-        <span class="skill"><b>AWS</b><span>2 yrs</span></span>
-        <span class="skill"><b>C++</b><span>4 yrs</span></span>
-        <span class="skill"><b>Go / Java</b><span>3 yrs</span></span>
-        <span class="skill"><b>JavaScript / Vue / React</b><span>4 yrs</span></span>
-      </div>
-    </div>
-
-    <div class="group">
-      <div class="gname">Classic ML &amp; sensing</div>
-      <div class="skills">
-        <span class="skill"><b>Computer vision</b><span>6 yrs</span></span>
-        <span class="skill"><b>Anomaly detection</b><span>4 yrs</span></span>
-        <span class="skill"><b>Sensor / multi-modal fusion</b><span>4 yrs</span></span>
-        <span class="skill"><b>Reinforcement learning</b><span>3 yrs</span></span>
-        <span class="skill"><b>LightGBM / scikit-learn</b><span>6 yrs</span></span>
+        <span class="skill"><b>SQL / PostgreSQL</b><span>production</span></span>
+        <span class="skill"><b>Azure AI Foundry</b><span>endpoints</span></span>
+        <span class="skill"><b>AWS</b><span>cloud GPUs</span></span>
+        <span class="skill"><b>Kubernetes / Helm</b><span>MLOps</span></span>
+        <span class="skill"><b>Docker / Slurm</b><span>infra</span></span>
+        <span class="skill"><b>Prometheus / Grafana</b><span>observability</span></span>
+        <span class="skill"><b>CI/CD / MLflow</b><span>delivery</span></span>
       </div>
     </div>
     </div>
@@ -623,13 +521,13 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <h2>Education</h2>
     <div class="row">
       <h3>Voronezh State Technical University | Ph.D. in Applied Mathematics</h3>
-      <div class="meta">2010–2014</div>
-      <p>Thesis: numerical methods for modelling and control of multi-agent systems — created new techniques to make agentic neural network models more interpretable and transparent for real-world scenarios.</p>
+      <div class="meta">2010-2014</div>
+      <p>Thesis: numerical methods for modeling and control of multi-agent systems - developed neural-network-driven coordination and control of cooperating agents.</p>
     </div>
     <div class="row">
       <h3>Lipetsk State Technical University | Specialist in Applied Mathematics</h3>
-      <div class="meta">2005–2010</div>
-      <p>Five-year degree, equivalent to B.Sc. + M.Sc. Thesis: computer vision and algebraic methods for autonomous robot control — built neural-network control of a robotic hand under physics-based constraints.</p>
+      <div class="meta">2005-2010</div>
+      <p>Five-year degree equivalent to B.Sc. + M.Sc. Thesis: computer vision and algebraic methods for autonomous robot control - built neural-network control of a robotic hand under physics-based constraints.</p>
     </div>
   </div>
 </section>
@@ -638,10 +536,70 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
   <div class="wrap">
     <h2>Languages</h2>
     <div class="skills">
-      <span class="skill"><b>English</b><span>professional</span></span>
+      <span class="skill"><b>English</b><span>full working proficiency</span></span>
       <span class="skill"><b>Russian</b><span>native</span></span>
       <span class="skill"><b>Finnish</b><span>conversational</span></span>
       <span class="skill"><b>German</b><span>conversational</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="publications">
+  <div class="wrap">
+    <h2>Publications</h2>
+    <p class="lede">Selected academic publications and registered software, translated and normalized in English.</p>
+
+    <div class="accordion">
+      <details open>
+        <summary>Peer-reviewed and book-chapter publications</summary>
+        <div class="content">
+          <ol>
+            <li>Nikolayev D., Shmyrin A., Bluymin S. Tropical Neighborhood and Neural Models for Modelling of Greedy Organizational Systems. Global Journal of Pure and Applied Mathematics, Vol. 12, No. 6, 2016, pp. 4741-4747.</li>
+            <li>Abramov S., Korotin A., Somov A., Burnaev E., Stepanov A., Nikolaev D. Effect of Video Game Players' Emotions on Team Performance in the Course of eSports Tournament. IEEE Internet of Things Journal, 2020.</li>
+            <li>Nikolayev D.A. Idempotent Algebra Models of Single-Agent and Multi-Agent Dynamics. In: Tropical and Idempotent Mathematics and Applications, Contemporary Mathematics, Vol. 616. American Mathematical Society, 2012, pp. 221-240.</li>
+            <li>Nikolayev D.A. Analytical Description of Manipulator Robot Dynamics in an Uncertain Environment Based on Methods of Idempotent Mathematics. Automation and Remote Control, No. 11, 2012, pp. 114-128.</li>
+            <li>Nikolayev D.A. Modeling and Control of Agent Motion in an Uncertain Environment Using Methods of Idempotent Algebra. Large-Scale Systems Control, No. 40, 2012, pp. 311-328.</li>
+            <li>Nikolayev D.A. Dynamic Systems with a Two-Dimensional Parameter over Idempotent Semirings for Modeling Multi-Agent System Motion. Control Systems and Information Technologies, No. 2(48), 2012, pp. 22-26.</li>
+            <li>Prinkov A.S., Nikolaev D.A. Development of a Finite-Field Algebra Library for Generalized Cryptographic Algorithms. International Research Journal, No. 7(49), Part 4, 2016, pp. 92-94.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>Conference papers and workshop proceedings</summary>
+        <div class="content">
+          <ol>
+            <li>Nikolayev D.A. Nonlinear Dynamical Systems over Idempotent Semirings for Modeling Single-Agent Motion in an Uncertain Environment. In: Tropical and Idempotent Mathematics, Moscow, 2012, pp. 185-192.</li>
+            <li>Nikolayev D.A. Idempotent Algebra Methods for Modeling Hierarchical Multi-Agent System Motion. In: Tropical and Idempotent Mathematics, Moscow, 2012, pp. 193-197.</li>
+            <li>Nikolayev D.A. Algebraic Approach to Modeling and Control of Agent Motion in an Uncertain Environment. Information Technologies of Modeling and Control, No. 7(72), 2011, pp. 799-806.</li>
+            <li>Nikolayev D.A. Development of a Library of Generic Algorithms and Concepts for Idempotent Mathematics. Intelligent Computer-Based Learning Systems, International School-Seminar Proceedings, 2011, pp. 164-166.</li>
+            <li>Nikolayev D.A. Stationary Semiring Hopfield Neural Networks and Their Applications in Robotics. Mathematical Modeling in Engineering and Technology, 2011, pp. 36-38.</li>
+            <li>Nikolayev D.A. Hypergraph Interpretation of Solutions to Bellman Equations over Idempotent Fusion Semirings. Information and Telecommunication Systems and Control, 2011, pp. 164-167.</li>
+            <li>Nikolayev D.A. Application of Non-Stationary Semiring Hopfield Neural Networks for Trajectory Control of Industrial Robots in a Dynamic Environment with Obstacles. Fundamental and Applied Research, Development and Application of High Technologies in Industry, 2011, pp. 93-98.</li>
+            <li>Nikolayev D.A. Algebraic Model of Agent Motion in an Uncertain Environment. Fundamental and Applied Research, Development and Application of High Technologies in Industry, 2011, pp. 126-131.</li>
+            <li>Nikolayev D.A. Algebraic Model of Collective Agent Motion in an Uncertain Environment. Fundamental and Applied Research, Development and Application of High Technologies in Industry, 2011, pp. 131-138.</li>
+            <li>Nikolayev D.A. Algorithm for Industrial Robot Control in a Changing Environment Based on Interval and Idempotent Analysis. Modern Problems of Informatization in Analysis and Synthesis of Technological and Software-Telecommunication Systems, Vol. 17, 2012, pp. 308-310.</li>
+            <li>Nikolayev D.A. Dynamic Systems over Idempotent Semirings as Models of Single-Agent Motion. Large-Scale Systems Control, Young Researchers School-Conference Proceedings, Vol. 1, 2012, pp. 66-69.</li>
+            <li>Nikolayev D.A. Methods of Idempotent Algebra for Modeling and Control of Multi-Agent Systems. Large-Scale Systems Control, Young Researchers School-Conference Proceedings, Vol. 1, 2012, pp. 69-71.</li>
+            <li>Nikolayev D.A. On a New Class of Nonlinear Neighborhood Dynamical Systems as Models of Intelligent Agent Collectives. Voronezh Winter Mathematical School, 2013, p. 162.</li>
+            <li>Nikolayev D.A. Adaptive Control of an Industrial Robot Based on Interval Analysis Methods. First Step into Science, International Student Forum Proceedings, 2010, pp. 458-460.</li>
+            <li>Nikolayev D.A. Application of Generic Programming for Implementing Universal Algorithms of Idempotent Mathematics. First Step into Science, International Student Forum Proceedings, 2011, pp. 574-575.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>Registered software</summary>
+        <div class="content">
+          <ol>
+            <li>Nikolayev D.A., Fedorkova G.O. PathFinder Software Package. Official registration No. 50201000887, 2010.</li>
+            <li>Nikolayev D.A., Bluymin S.L. Modeling and Control of Multi-Agent Systems Using Methods of Idempotent Algebra. Official registration No. 2013615080, 2013.</li>
+            <li>Prinkov A.A., Nikolayev D.A., Bluymin S.L. Algebraic Cryptography Software Package. Official registration No. 2013615080, 2016.</li>
+            <li>Prinkov A.A., Nikolayev D.A., Bluymin S.L. Modeling, Analysis and Control of Multi-Agent Systems. Official registration No. 2013615080, 2016.</li>
+            <li>Kochetkov V.A., Nikolayev D.A., Bluymin S.L. Information Security System for Hierarchical Organizations. Official registration No. 2013615080, 2016.</li>
+          </ol>
+        </div>
+      </details>
     </div>
   </div>
 </section>
