@@ -5,10 +5,10 @@ in a browser and it works, on disk or on any static host.
 
 ## Files
 
-- `index.html` — the whole site (HTML + CSS + a few lines of JS, ~27 KB)
+- `index.html` — the whole site (HTML + CSS + a few lines of JS, ~32 KB)
 - `img/avatar.png` — the hero portrait
-- `cv.pdf` — the PDF the "📄 CV" chip links to. Currently a copy of `<repo>/cv-dev/cv-dev.pdf`.
-  Replace it whenever the master CV changes: `cp ../cv-dev/cv-dev.pdf cv.pdf`
+- `cv.pdf` — the PDF the "📄 CV" chip links to. A copy of `../resume/base/cv-eng_.pdf`.
+  Replace it whenever the base CV changes: `cp ../resume/base/cv-eng_.pdf cv.pdf`
 
 ## Publishing on GitHub Pages
 
@@ -19,7 +19,7 @@ in a browser and it works, on disk or on any static host.
 
 ## Editing
 
-Everything is in one file, in document order: hero → featured projects → experience → skills →
+Everything is in one file, in document order: hero → experience → skills →
 education → languages → footer. The colour palette is the six variables at the top of `<style>`:
 
 ```
@@ -28,8 +28,9 @@ education → languages → footer. The colour palette is the six variables at t
 --ink     body text              --line     borders
 ```
 
-Experience entries are `<article class="job">` blocks. "What the work is" is a `<details>` section
-open by default. The jump navigation is a plain list of anchors; if you
+Experience entries are `<article class="job">` blocks with project summaries and technology tags.
+The orange `.where` subtitle identifies the client or project team; put technical details in the description and tags.
+The jump navigation is a plain list of anchors; if you
 add or rename a job, update both the `id` on the article and the link in `<nav class="jump">`.
 
 ### Portrait and frame
@@ -55,9 +56,12 @@ To tune the porthole, edit these rules in `.hero-porthole`:
   `45deg` their spacing (eight marks), and the `2px`/`1px` in the `mask` their radial size.
 - `--port` — overall frame size (default `190px`).
 
-## Deliberately not included
+## Content source
 
-- **No numbers that are not verified.** The percentages in `scratchpad/bullets.md` (40% token generation,
-  30% VRAM, 28% MAP, 19% pricing accuracy, request volumes, latencies) appear nowhere on this page. A
-  public page is the worst place for a figure you cannot defend. Confirm them before adding them to a role.
-- **No gallery, hobbies, certificates or courses sections.** There is no material for them in this repo.
+Use `../resume/base/cv-eng.tex` as the primary content source for current roles, results and education.
+Retain complementary projects from the longer website history; omissions from a short CV do not
+mean those projects should be removed from the website. The latest content update was
+12 October 2026. Keep benchmark and production contexts, hardware configurations and qualifiers
+such as "up to", "approximately", "best measured" and "indicated" attached to performance claims.
+Keep client descriptions anonymous as supplied in the resume. The publications section is a
+selected list, matching the base resume.
