@@ -6,7 +6,9 @@ in a browser and it works, on disk or on any static host.
 ## Files
 
 - `index.html` — the whole site (HTML + CSS + a few lines of JS, ~32 KB)
-- `img/avatar.png` — the hero portrait
+- `img/avatar-380.png` — the hero portrait actually served (380×380, 256-colour, into a 190 px slot)
+- `img/avatar.png` — the untouched 1024×1024 original, kept as the source to re-export from
+- `favicon.ico` — 16/32/48 px “DN” monogram in the site palette (`#e08a3c` on `#0c1622`)
 - `cv.pdf` — the PDF the "📄 CV" chip links to. A copy of `../resume/base/cv-eng_.pdf`.
   Replace it whenever the base CV changes: `cp ../resume/base/cv-eng_.pdf cv.pdf`
 
@@ -35,7 +37,7 @@ add or rename a job, update both the `id` on the article and the link in `<nav c
 
 ### Portrait and frame
 
-The hero portrait is `img/avatar.png`, shown at 190 px inside `<div class="hero-porthole">`. To swap the
+The hero portrait is `img/avatar-380.png`, shown at 190 px inside `<div class="hero-porthole">`. To swap the
 picture, replace the file or change the `src` on `<img class="hero-photo">`.
 
 Two frame styles are built in:

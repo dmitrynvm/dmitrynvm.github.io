@@ -3,12 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dmitrii Nikolaev — Senior ML Engineer</title>
+<title>Dmitrii Nikolaev · ML Engineer</title>
 <meta name="description" content="Senior ML Engineer · LLM training and inference systems · Production AI · Helsinki, Finland">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dmitrii Nikolaev",
+  "url": "https://dmitrynvm.github.io/",
+  "image": "https://dmitrynvm.github.io/img/avatar-380.png",
+  "jobTitle": "Senior ML Engineer",
+  "worksFor": { "@type": "Organization", "name": "AMD", "url": "https://www.amd.com/" },
+  "homeLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Helsinki", "addressCountry": "FI" } },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Voronezh State Technical University" },
+    { "@type": "CollegeOrUniversity", "name": "Lipetsk State Technical University" }
+  ],
+  "knowsAbout": ["Large language model inference", "Distributed training", "GPU performance optimization", "Machine learning systems"],
+  "knowsLanguage": ["en", "ru", "fi", "de"],
+  "sameAs": [
+    "https://www.linkedin.com/in/dmitrynvm/",
+    "https://github.com/dmitrynvm",
+    "https://gitlab.com/dmitrynvm"
+  ]
+}
+</script>
 <style>
 :root{
   --bg:#0c1622; --bg2:#111f2e; --card:#16283a; --card2:#1a2f44;
-  --ink:#e6edf5; --mut:#93a4b8; --dim:#6c7f94;
+  --ink:#e6edf5; --mut:#93a4b8; --dim:#8294a8;
   --accent:#e08a3c; --accent2:#2f6f9e; --line:#22374d;
 }
 *{box-sizing:border-box}
@@ -20,7 +44,6 @@ a:hover{text-decoration:underline}
 .wrap{max-width:980px;margin:0 auto;padding:0 20px}
 h2{font-size:1.5rem;margin:0 0 4px}
 .sec{padding:46px 0;border-top:1px solid var(--line)}
-.sec>.wrap>.lede{color:var(--mut);margin:0 0 22px}
 
 /* hero */
 header.hero{padding:60px 0 40px;background:radial-gradient(700px 300px at 50% -80px,rgba(224,138,60,.14),transparent)}
@@ -60,7 +83,6 @@ header.hero{padding:60px 0 40px;background:radial-gradient(700px 300px at 50% -8
   0 16px 40px rgba(0,0,0,.62)}
 
 .skill-board{margin-top:18px}
-.skill-board .skill-groups{width:100%;min-width:0}
 
 .hero-porthole.is-hud{border-radius:0;background:transparent;box-shadow:none;padding:0}
 .hero-porthole.is-hud:hover{box-shadow:none}
@@ -108,17 +130,6 @@ nav.jump .wrap{display:flex;gap:16px;overflow-x:auto;padding-top:10px;padding-bo
 nav.jump a{color:var(--mut);font-size:.84rem;white-space:nowrap;font-weight:600}
 nav.jump a:hover{color:var(--accent);text-decoration:none}
 
-/* accordion */
-.accordion{display:flex;flex-direction:column;gap:12px;margin-top:18px}
-.accordion details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0;overflow:hidden}
-.accordion summary{cursor:pointer;list-style:none;padding:14px 16px;color:var(--accent);font-weight:800}
-.accordion summary::-webkit-details-marker{display:none}
-.accordion summary::before{content:"+ ";color:var(--mut);font-weight:800}
-.accordion details[open] summary{border-bottom:1px solid var(--line)}
-.accordion details[open] summary::before{content:"- "}
-.accordion .content{padding:4px 18px 16px}
-.accordion ol{margin:10px 0 0;padding-left:22px}
-.accordion li{margin-bottom:10px;color:var(--mut)}
 
 /* experience */
 .job{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
@@ -134,12 +145,6 @@ nav.jump a:hover{color:var(--accent);text-decoration:none}
 .job details[open] summary::before{content:"▾ "}
 .job ul{margin:10px 0 0;padding-left:20px}
 .job li{margin-bottom:7px;color:var(--ink)}
-.job li .client{color:var(--dim)}
-.what-work{margin:0 0 18px}
-.what-work .what-label{margin:0 0 12px;color:var(--accent);font-size:1.1rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
-.what-work ul{list-style:disc;margin:0;padding-left:26px}
-.what-work li{margin:0 0 10px;color:var(--ink);font-size:1rem;line-height:1.55}
-.what-work li:last-child{margin-bottom:0}
 .work{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}
 .work h4{margin:0 0 2px;font-size:1rem}
 .work .where{color:var(--accent);font-size:.8rem;font-weight:700;margin-bottom:8px}
@@ -169,8 +174,11 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
   .hero-head{flex-direction:column;align-items:center;text-align:center;gap:18px}
   .hero-head .hero-main{flex:1 1 auto;width:100%;text-align:left}
   .hero-portrait{--port:160px}
-  .skill-board{flex-direction:column}
   .deal .grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
 }
 </style>
 </head>
@@ -181,10 +189,10 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
     <div class="hero-head">
     <div class="hero-portrait">
     <div class="hero-porthole">
-    <img class="hero-photo" src="img/avatar.png"
+    <img class="hero-photo" src="img/avatar-380.png"
          alt="Portrait of Dmitrii Nikolaev" width="190" height="190" loading="eager">
     </div>
-    <a class="cv" href="cv.pdf" download>PDF</a>
+    <a class="cv" href="cv.pdf">Download CV (PDF)</a>
     </div>
     <div class="hero-main">
     <div class="name-row">
@@ -411,7 +419,7 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
   <div class="wrap">
     <h2>Languages</h2>
     <div class="skills">
-      <span class="skill"><b>English</b><span>Working</span></span>
+      <span class="skill"><b>English</b><span>professional</span></span>
       <span class="skill"><b>Russian</b><span>native</span></span>
       <span class="skill"><b>Finnish</b><span>conversational</span></span>
       <span class="skill"><b>German</b><span>conversational</span></span>
@@ -419,7 +427,7 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);fon
   </div>
 </section>
 
-<section class="sec" id="publications"><div class="wrap"><h2>Selected publications</h2><div class="row"><ol><li>Nikolaev D. et al. Effect of Video Game Players&#x27; Emotions on Team Performance in the Course of eSports Tournament. IEEE Internet of Things Journal, 2020.</li><li>Nikolayev D. et al. Tropical Neighborhood and Neural Models for Modeling of Greedy Organizational Systems. Global Journal of Pure and Applied Mathematics, 2016, pp. 4741-4747.</li><li>Nikolayev D.A. Idempotent algebra methods for modelling of hierarchical multiagent systems motion. In G.L. Litvinov, V.P. Maslov, A.G. Kushner, S.N. Sergeev (eds.), Tropical and Idempotent Mathematics. Moscow, 2012, pp. 193-197.</li></ol></div></div></section>
+<section class="sec" id="publications"><div class="wrap"><h2>Selected publications</h2><div class="row"><ol><li>Nikolaev D. et al. Effect of Video Game Players&#x27; Emotions on Team Performance in the Course of eSports Tournament. IEEE Internet of Things Journal, 2020.</li><li>Nikolaev D. et al. Tropical Neighborhood and Neural Models for Modeling of Greedy Organizational Systems. Global Journal of Pure and Applied Mathematics, 2016, pp. 4741-4747.</li><li>Nikolaev D.A. Idempotent algebra methods for modelling of hierarchical multiagent systems motion. In G.L. Litvinov, V.P. Maslov, A.G. Kushner, S.N. Sergeev (eds.), Tropical and Idempotent Mathematics. Moscow, 2012, pp. 193-197.</li></ol></div></div></section>
 
 <footer>
   <div class="wrap">
